@@ -12,6 +12,8 @@ var searchData=
   ['parseschema',['parseSchema',['../classYaHTTP_1_1URL.html#a9d652ef84bfe1b9d69f6bf1798836ccb',1,'YaHTTP::URL']]],
   ['parseurlparameters',['parseUrlParameters',['../classYaHTTP_1_1Utility.html#a726e325eba7ebc1155ed914b15030d3b',1,'YaHTTP::Utility']]],
   ['parseuserpass',['parseUserPass',['../classYaHTTP_1_1URL.html#a24ade6c45406c47454f759fb003678c6',1,'YaHTTP::URL']]],
-  ['post',['POST',['../classYaHTTP_1_1HTTPBase.html#ac806de787303159670d1ce5ba905bba0',1,'YaHTTP::HTTPBase']]],
-  ['prepareaspost',['prepareAsPost',['../classYaHTTP_1_1Request.html#a6be78deabfa6d997aeaf5d93807e042a',1,'YaHTTP::Request']]]
+  ['post',['POST',['../classYaHTTP_1_1HTTPBase.html#ac806de787303159670d1ce5ba905bba0',1,'YaHTTP::HTTPBase::POST()'],['../classYaHTTP_1_1Router.html#af64ac8c049f3b9fc8f3cce32a020f1cb',1,'YaHTTP::Router::Post()']]],
+  ['prepareaspost',['prepareAsPost',['../classYaHTTP_1_1Request.html#a6be78deabfa6d997aeaf5d93807e042a',1,'YaHTTP::Request']]],
+  ['printroutes',['PrintRoutes',['../classYaHTTP_1_1Router.html#ac4c03a696faa5011f312877051067ef6',1,'YaHTTP::Router::PrintRoutes(std::ostream &amp;os)'],['../classYaHTTP_1_1Router.html#aca5dc12d5e9d66479229dfb904935cd4',1,'YaHTTP::Router::printRoutes(std::ostream &amp;os)']]],
+  ['put',['Put',['../classYaHTTP_1_1Router.html#a35c1dc179db078c3154f40a462f8dcf4',1,'YaHTTP::Router']]]
 ];

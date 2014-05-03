@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="reqresp_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifdef HAVE_CXX11</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define HAVE_CPP_FUNC_PTR</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="reqresp_8hpp.html#aed1e050e06e5645770030aad7e805707">    3</a></span>&#160;<span class="preprocessor">#define HAVE_CPP_FUNC_PTR</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="keyword">namespace </span>funcptr = std;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef HAVE_BOOST</span></div>
@@ -132,28 +132,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html">   41</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef HAVE_CPP_FUNC_PTR</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span>    <span class="keyword">class </span>SendBodyRender {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html">   44</a></span>&#160;<span class="preprocessor"></span>    <span class="keyword">class </span><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html">SendBodyRender</a> {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      SendBodyRender() {};</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#a5de43a81c141c55ca5507c6b833d687e">   46</a></span>&#160;      <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#a5de43a81c141c55ca5507c6b833d687e">SendBodyRender</a>() {};</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream&amp; os)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#afdf4d1a98592c7234b70a52595bca513">   48</a></span>&#160;      <span class="keywordtype">size_t</span> <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#afdf4d1a98592c7234b70a52595bca513">operator()</a>(<span class="keyword">const</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream&amp; os)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        os &lt;&lt; doc-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> doc-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a>.length();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      };</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">class </span>SendFileRender {</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html">   53</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html">SendFileRender</a> {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      SendFileRender(<span class="keyword">const</span> std::string&amp; path) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        this-&gt;path = path;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a54da3c511f1cc7ab685395fad549964a">   55</a></span>&#160;      <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a54da3c511f1cc7ab685395fad549964a">SendFileRender</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">path</a>) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        this-&gt;path = <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">path</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      };</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream&amp; os)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a4bbb69d361cdeaf376f7d0306036cbb6">   59</a></span>&#160;      <span class="keywordtype">size_t</span> <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a4bbb69d361cdeaf376f7d0306036cbb6">operator()</a>(<span class="keyword">const</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream&amp; os)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">char</span> buf[4096];</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">size_t</span> n,k;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#ifdef HAVE_CXX11</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span>        std::ifstream ifs(path, std::ifstream::binary);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span>        std::ifstream ifs(<a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">path</a>, std::ifstream::binary);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span>        std::ifstream ifs(path.c_str(), std::ifstream::binary);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span>        std::ifstream ifs(<a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">path</a>.c_str(), std::ifstream::binary);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span>        n = 0;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">while</span>(ifs &amp;&amp; ifs.good()) {</div>
@@ -164,14 +164,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> n;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      };</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">   76</a></span>&#160;      };</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      std::string path;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      std::string <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f">path</a>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38">   81</a></span>&#160;<span class="preprocessor"></span>    <a class="code" href="classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38">HTTPBase</a>() {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#ifdef HAVE_CPP_FUNC_PTR</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor"></span>      renderer = SendBodyRender();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor"></span>      <a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a> = <a class="code" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html">SendBodyRender</a>();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor"></span>    };</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">protected</span>:</div>
@@ -183,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a>; this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#ifdef HAVE_CPP_FUNC_PTR</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"></span>      this-&gt;renderer = rhs.renderer;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"></span>      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor"></span>    };</div>
 <div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html#a4e959209f43c4091b4de511fcbc0015b">   98</a></span>&#160;    <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a>&amp; <a class="code" href="classYaHTTP_1_1HTTPBase.html#a4e959209f43c4091b4de511fcbc0015b">operator=</a>(<span class="keyword">const</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a>&amp; rhs) {</div>
@@ -194,7 +194,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a>; this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#ifdef HAVE_CPP_FUNC_PTR</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span>      this-&gt;renderer = rhs.renderer;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span>      this-&gt;<a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a> = rhs.<a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor"></span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html#ab9549dc2e377575cf2569218c9425f9e">  109</a></span>&#160;    };</div>
@@ -212,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">  121</a></span>&#160;    std::string <a class="code" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#ifdef HAVE_CPP_FUNC_PTR</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span>    funcptr::function&lt;size_t(const HTTPBase*,std::ostream&amp;)&gt; renderer;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">  124</a></span>&#160;<span class="preprocessor"></span>    funcptr::function&lt;size_t(const HTTPBase*,std::ostream&amp;)&gt; <a class="code" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span>    <span class="keywordtype">void</span> <a class="code" href="classYaHTTP_1_1HTTPBase.html#adb83f37e7a89ca7f808d0e0abe3ebed0">write</a>(std::ostream&amp; os) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
@@ -322,7 +322,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:46:56 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

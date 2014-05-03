@@ -85,6 +85,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#namespaces">Constant Groups</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">router.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -107,10 +113,74 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 <p><a href="router_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html">YaHTTP::Router</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceYaHTTP"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html">YaHTTP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Constant Groups</h2></td></tr>
+<tr class="memitem:namespaceYaHTTP"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html">YaHTTP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aed1e050e06e5645770030aad7e805707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="router_8hpp.html#aed1e050e06e5645770030aad7e805707">HAVE_CPP_FUNC_PTR</a></td></tr>
+<tr class="separator:aed1e050e06e5645770030aad7e805707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabed7f7d1400564ec843acd4dfb72e59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="router_8hpp.html#aabed7f7d1400564ec843acd4dfb72e59">IGNORE</a>&#160;&#160;&#160;std::ignore</td></tr>
+<tr class="separator:aabed7f7d1400564ec843acd4dfb72e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="memItemLeft" align="right" valign="top">typedef funcptr::function<br class="typebreak"/>
+&lt; bool(Request *req, Response <br class="typebreak"/>
+*resp)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">YaHTTP::THandlerFunction</a></td></tr>
+<tr class="memdesc:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler function pointer.  <a href="#a3a40176c0a8c9255a38c36ea2a55ea6a">More...</a><br/></td></tr>
+<tr class="separator:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="memItemLeft" align="right" valign="top">typedef funcptr::tuple<br class="typebreak"/>
+&lt; std::string, std::string, <br class="typebreak"/>
+THandlerFunction, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">YaHTTP::TRoute</a></td></tr>
+<tr class="memdesc:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route tuple (method, urlmask, handler, name)  <a href="#a5f38e876a142cd2b6d142ff8f3c3f62c">More...</a><br/></td></tr>
+<tr class="separator:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b219784409898bfb1e63ebf140d0999"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; TRoute &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a0b219784409898bfb1e63ebf140d0999">YaHTTP::TRouteList</a></td></tr>
+<tr class="memdesc:a0b219784409898bfb1e63ebf140d0999"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of routes in order of evaluation.  <a href="#a0b219784409898bfb1e63ebf140d0999">More...</a><br/></td></tr>
+<tr class="separator:a0b219784409898bfb1e63ebf140d0999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="aed1e050e06e5645770030aad7e805707"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAVE_CPP_FUNC_PTR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aabed7f7d1400564ec843acd4dfb72e59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IGNORE&#160;&#160;&#160;std::ignore</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:46:56 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

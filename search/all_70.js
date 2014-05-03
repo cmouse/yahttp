@@ -14,8 +14,8 @@ var searchData=
   ['parseanchor',['parseAnchor',['../classYaHTTP_1_1URL.html#aa02cc0ca8e82984d7c081a20855d4eb9',1,'YaHTTP::URL']]],
   ['parsecookie',['parseCookie',['../classYaHTTP_1_1DateTime.html#a1edf8fec9caa682348bf0338c31755e9',1,'YaHTTP::DateTime']]],
   ['parsecookieheader',['parseCookieHeader',['../classYaHTTP_1_1CookieJar.html#ab92492001bde26c82c3cdd35da6f631b',1,'YaHTTP::CookieJar']]],
-  ['parseerror',['ParseError',['../classYaHTTP_1_1ParseError.html',1,'YaHTTP']]],
   ['parseerror',['ParseError',['../classYaHTTP_1_1ParseError.html#a4d645ab5672d6de7661100b0ba9d629d',1,'YaHTTP::ParseError::ParseError()'],['../classYaHTTP_1_1ParseError.html#a936030ba1c3ef4bdb94d5cca51c12084',1,'YaHTTP::ParseError::ParseError(const std::string &amp;reason)']]],
+  ['parseerror',['ParseError',['../classYaHTTP_1_1ParseError.html',1,'YaHTTP']]],
   ['parsehost',['parseHost',['../classYaHTTP_1_1URL.html#ab848ac36e4270427ef0e42f718df51b0',1,'YaHTTP::URL']]],
   ['parseparameters',['parseParameters',['../classYaHTTP_1_1URL.html#a79ff3d3ff7e3c10e3e14457946b2973b',1,'YaHTTP::URL']]],
   ['parsepath',['parsePath',['../classYaHTTP_1_1URL.html#abac9888ef2c7136d912861f98c48093f',1,'YaHTTP::URL']]],
@@ -23,13 +23,15 @@ var searchData=
   ['parseurlparameters',['parseUrlParameters',['../classYaHTTP_1_1Utility.html#a726e325eba7ebc1155ed914b15030d3b',1,'YaHTTP::Utility']]],
   ['parseuserpass',['parseUserPass',['../classYaHTTP_1_1URL.html#a24ade6c45406c47454f759fb003678c6',1,'YaHTTP::URL']]],
   ['password',['password',['../classYaHTTP_1_1URL.html#a464b081b45659c08aa0ad588a3f69576',1,'YaHTTP::URL']]],
-  ['path',['path',['../classYaHTTP_1_1Cookie.html#a77baa04d8ea12756a19a59465f721171',1,'YaHTTP::Cookie::path()'],['../classYaHTTP_1_1URL.html#a144fe472c9e4edca02d268262b3144e7',1,'YaHTTP::URL::path()']]],
+  ['path',['path',['../classYaHTTP_1_1Cookie.html#a77baa04d8ea12756a19a59465f721171',1,'YaHTTP::Cookie::path()'],['../classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f',1,'YaHTTP::HTTPBase::SendFileRender::path()'],['../classYaHTTP_1_1URL.html#a144fe472c9e4edca02d268262b3144e7',1,'YaHTTP::URL::path()']]],
   ['pathless',['pathless',['../classYaHTTP_1_1URL.html#a54248b4be53df928e4797dead9f798d8',1,'YaHTTP::URL']]],
   ['port',['port',['../classYaHTTP_1_1URL.html#aa6415ef4dbc9f2b6248edd2b58817176',1,'YaHTTP::URL']]],
   ['pos',['pos',['../classYaHTTP_1_1AsyncLoader.html#a7eff80dc4f4b2135faef599a433c53f2',1,'YaHTTP::AsyncLoader']]],
-  ['post',['POST',['../classYaHTTP_1_1HTTPBase.html#ac806de787303159670d1ce5ba905bba0',1,'YaHTTP::HTTPBase']]],
+  ['post',['POST',['../classYaHTTP_1_1HTTPBase.html#ac806de787303159670d1ce5ba905bba0',1,'YaHTTP::HTTPBase::POST()'],['../classYaHTTP_1_1Router.html#af64ac8c049f3b9fc8f3cce32a020f1cb',1,'YaHTTP::Router::Post()']]],
   ['postformat_5ft',['postformat_t',['../namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bd',1,'YaHTTP']]],
   ['postvars',['postvars',['../classYaHTTP_1_1HTTPBase.html#ac35231550ccab6d07b8d51b5b8818167',1,'YaHTTP::HTTPBase']]],
   ['prepareaspost',['prepareAsPost',['../classYaHTTP_1_1Request.html#a6be78deabfa6d997aeaf5d93807e042a',1,'YaHTTP::Request']]],
-  ['protocol',['protocol',['../classYaHTTP_1_1URL.html#a3333da74cbaf6155a9ef93d0f5ac9c2a',1,'YaHTTP::URL']]]
+  ['printroutes',['PrintRoutes',['../classYaHTTP_1_1Router.html#ac4c03a696faa5011f312877051067ef6',1,'YaHTTP::Router::PrintRoutes(std::ostream &amp;os)'],['../classYaHTTP_1_1Router.html#aca5dc12d5e9d66479229dfb904935cd4',1,'YaHTTP::Router::printRoutes(std::ostream &amp;os)']]],
+  ['protocol',['protocol',['../classYaHTTP_1_1URL.html#a3333da74cbaf6155a9ef93d0f5ac9c2a',1,'YaHTTP::URL']]],
+  ['put',['Put',['../classYaHTTP_1_1Router.html#a35c1dc179db078c3154f40a462f8dcf4',1,'YaHTTP::Router']]]
 ];
