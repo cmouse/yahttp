@@ -101,8 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a53a8b7bdd2a8d75b7f89d9b394a61bb1"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a53a8b7bdd2a8d75b7f89d9b394a61bb1">decodeURL</a> (const std::string &amp;component)</td></tr>
 <tr class="separator:a53a8b7bdd2a8d75b7f89d9b394a61bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb655c0a5299d0eca625fb923b5b0552"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#afb655c0a5299d0eca625fb923b5b0552">encodeURL</a> (const std::string &amp;component, bool encodeSlash=true)</td></tr>
-<tr class="separator:afb655c0a5299d0eca625fb923b5b0552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b42c65b5f46e6d7c9ca85379909f56"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a29b42c65b5f46e6d7c9ca85379909f56">encodeURL</a> (const std::string &amp;component, bool asUrl=true)</td></tr>
+<tr class="separator:a29b42c65b5f46e6d7c9ca85379909f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3d4addea9bba78a71cc1b28dc20e1e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a6e3d4addea9bba78a71cc1b28dc20e1e">encodeURL</a> (const std::wstring &amp;component, bool asUrl=true)</td></tr>
+<tr class="separator:a6e3d4addea9bba78a71cc1b28dc20e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b47237474d1e87dcd74bf1791d41ea4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a9b47237474d1e87dcd74bf1791d41ea4">status2text</a> (int status)</td></tr>
 <tr class="separator:a9b47237474d1e87dcd74bf1791d41ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726e325eba7ebc1155ed914b15030d3b"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, <br class="typebreak"/>
@@ -112,12 +114,14 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="separator:af27c477b0f267b230f1b79bc3f983104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bb4270cab4563efb1eb5e13d7a01f7c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a1bb4270cab4563efb1eb5e13d7a01f7c">iequals</a> (const std::string &amp;a, const std::string &amp;b)</td></tr>
 <tr class="separator:a1bb4270cab4563efb1eb5e13d7a01f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69b737fde638177fe5fbfff87f752030"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#a69b737fde638177fe5fbfff87f752030">trim_right</a> (std::string &amp;str)</td></tr>
-<tr class="separator:a69b737fde638177fe5fbfff87f752030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a6de2ff17537cb0eb33edac5adf988"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#ad2a6de2ff17537cb0eb33edac5adf988">trimRight</a> (std::string &amp;str)</td></tr>
+<tr class="separator:ad2a6de2ff17537cb0eb33edac5adf988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b38800ede44ba0ccfad65c8d19d756"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Utility.html#aa4b38800ede44ba0ccfad65c8d19d756">camelizeHeader</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:aa4b38800ede44ba0ccfad65c8d19d756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Various helpers needed in the code </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa4b38800ede44ba0ccfad65c8d19d756"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +170,7 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 </div>
 </div>
-<a class="anchor" id="afb655c0a5299d0eca625fb923b5b0552"></a>
+<a class="anchor" id="a29b42c65b5f46e6d7c9ca85379909f56"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -183,7 +187,41 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>encodeSlash</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>asUrl</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6e3d4addea9bba78a71cc1b28dc20e1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string YaHTTP::Utility::encodeURL </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>component</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>asUrl</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -322,7 +360,7 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 </div>
 </div>
-<a class="anchor" id="a69b737fde638177fe5fbfff87f752030"></a>
+<a class="anchor" id="ad2a6de2ff17537cb0eb33edac5adf988"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -330,7 +368,7 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void YaHTTP::Utility::trim_right </td>
+          <td class="memname">static void YaHTTP::Utility::trimRight </td>
           <td>(</td>
           <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em>)</td><td></td>
@@ -352,7 +390,7 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

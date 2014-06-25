@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['parameters',['parameters',['../classYaHTTP_1_1URL.html#aa732bae4e8a6d632fb5e947e62c62a50',1,'YaHTTP::URL']]],
-  ['params',['params',['../classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d',1,'YaHTTP::HTTPBase']]],
+  ['parameters',['parameters',['../classYaHTTP_1_1HTTPBase.html#a3e217116080528b2f208bfb5cf2db549',1,'YaHTTP::HTTPBase::parameters()'],['../classYaHTTP_1_1URL.html#aa732bae4e8a6d632fb5e947e62c62a50',1,'YaHTTP::URL::parameters()']]],
   ['password',['password',['../classYaHTTP_1_1URL.html#a464b081b45659c08aa0ad588a3f69576',1,'YaHTTP::URL']]],
   ['path',['path',['../classYaHTTP_1_1Cookie.html#a77baa04d8ea12756a19a59465f721171',1,'YaHTTP::Cookie::path()'],['../classYaHTTP_1_1HTTPBase_1_1SendFileRender.html#a2580c757fcab5319f39d59dc97c2792f',1,'YaHTTP::HTTPBase::SendFileRender::path()'],['../classYaHTTP_1_1URL.html#a144fe472c9e4edca02d268262b3144e7',1,'YaHTTP::URL::path()']]],
   ['pathless',['pathless',['../classYaHTTP_1_1URL.html#a54248b4be53df928e4797dead9f798d8',1,'YaHTTP::URL']]],

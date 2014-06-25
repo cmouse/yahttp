@@ -133,14 +133,14 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="separator:ab2115e6abd27099133a511e32a1daec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b1dc3ad673e724f079e8523c81311de"><td class="memItemLeft" align="right" valign="top">typedef funcptr::tuple&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a1b1dc3ad673e724f079e8523c81311de">TDelim</a></td></tr>
 <tr class="separator:a1b1dc3ad673e724f079e8523c81311de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="memItemLeft" align="right" valign="top">typedef funcptr::function<br class="typebreak"/>
-&lt; bool(<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a> <br class="typebreak"/>
-*resp)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a></td></tr>
-<tr class="memdesc:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler function pointer.  <a href="#a3a40176c0a8c9255a38c36ea2a55ea6a">More...</a><br/></td></tr>
-<tr class="separator:a3a40176c0a8c9255a38c36ea2a55ea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636957807dfdb22373788b828908f86a"><td class="memItemLeft" align="right" valign="top">typedef funcptr::function<br class="typebreak"/>
+&lt; void(<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a> <br class="typebreak"/>
+*resp)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a></td></tr>
+<tr class="memdesc:a636957807dfdb22373788b828908f86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler function pointer.  <a href="#a636957807dfdb22373788b828908f86a">More...</a><br/></td></tr>
+<tr class="separator:a636957807dfdb22373788b828908f86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="memItemLeft" align="right" valign="top">typedef funcptr::tuple<br class="typebreak"/>
 &lt; std::string, std::string, <br class="typebreak"/>
-<a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">TRoute</a></td></tr>
+<a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">TRoute</a></td></tr>
 <tr class="memdesc:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route tuple (method, urlmask, handler, name)  <a href="#a5f38e876a142cd2b6d142ff8f3c3f62c">More...</a><br/></td></tr>
 <tr class="separator:a5f38e876a142cd2b6d142ff8f3c3f62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b219784409898bfb1e63ebf140d0999"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">TRoute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a0b219784409898bfb1e63ebf140d0999">TRouteList</a></td></tr>
@@ -169,7 +169,7 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a61139e4ed39fe4f8f926825c74aa011c"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a61139e4ed39fe4f8f926825c74aa011c">MONTHS</a> [] = {0,&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;,0}</td></tr>
 <tr class="separator:a61139e4ed39fe4f8f926825c74aa011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a878044c52bdddc0d2cfbf7a335ef1afb"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a878044c52bdddc0d2cfbf7a335ef1afb">DAYS</a> [] = {&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;}</td></tr>
+<tr class="memitem:a878044c52bdddc0d2cfbf7a335ef1afb"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceYaHTTP.html#a878044c52bdddc0d2cfbf7a335ef1afb">DAYS</a> [] = {&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;,0}</td></tr>
 <tr class="separator:a878044c52bdddc0d2cfbf7a335ef1afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -209,12 +209,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3a40176c0a8c9255a38c36ea2a55ea6a"></a>
+<a class="anchor" id="a636957807dfdb22373788b828908f86a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef funcptr::function&lt;bool(<a class="el" href="classYaHTTP_1_1Request.html">Request</a>* req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a>* resp)&gt; <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">YaHTTP::THandlerFunction</a></td>
+          <td class="memname">typedef funcptr::function&lt;void(<a class="el" href="classYaHTTP_1_1Request.html">Request</a>* req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a>* resp)&gt; <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">YaHTTP::THandlerFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +228,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef funcptr::tuple&lt;std::string, std::string, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>, std::string&gt; <a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">YaHTTP::TRoute</a></td>
+          <td class="memname">typedef funcptr::tuple&lt;std::string, std::string, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>, std::string&gt; <a class="el" href="namespaceYaHTTP.html#a5f38e876a142cd2b6d142ff8f3c3f62c">YaHTTP::TRoute</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -384,7 +384,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* YaHTTP::DAYS[] = {&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;}</td>
+          <td class="memname">const char* YaHTTP::DAYS[] = {&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;,0}</td>
         </tr>
       </table>
   </td>
@@ -419,7 +419,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

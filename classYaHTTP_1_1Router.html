@@ -108,10 +108,10 @@ Collaboration diagram for YaHTTP::Router:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10ba424367b4639999dbddb165724b05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a10ba424367b4639999dbddb165724b05">map</a> (const std::string &amp;method, const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> hander, const std::string &amp;name)</td></tr>
-<tr class="separator:a10ba424367b4639999dbddb165724b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a078fc5c716ccf31a22fd109fe3be0bef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a078fc5c716ccf31a22fd109fe3be0bef">route</a> (<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a> *resp)</td></tr>
-<tr class="separator:a078fc5c716ccf31a22fd109fe3be0bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28ecb782f55191c3c35d41c7304ca14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#ac28ecb782f55191c3c35d41c7304ca14">map</a> (const std::string &amp;method, const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name)</td></tr>
+<tr class="separator:ac28ecb782f55191c3c35d41c7304ca14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162be5455d5fb54cab7d758c7facc6dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a162be5455d5fb54cab7d758c7facc6dd">route</a> (<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> &amp;handler)</td></tr>
+<tr class="separator:a162be5455d5fb54cab7d758c7facc6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5dc12d5e9d66479229dfb904935cd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#aca5dc12d5e9d66479229dfb904935cd4">printRoutes</a> (std::ostream &amp;os)</td></tr>
 <tr class="separator:aca5dc12d5e9d66479229dfb904935cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420c70706b45decee0add3f9e5958294"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::string, <br class="typebreak"/>
@@ -120,23 +120,29 @@ std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a0901cc2d055a79a407f58dac4e6154"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a2a0901cc2d055a79a407f58dac4e6154">Map</a> (const std::string &amp;method, const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:a2a0901cc2d055a79a407f58dac4e6154"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a2a0901cc2d055a79a407f58dac4e6154">Map</a> (const std::string &amp;method, const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:a2a0901cc2d055a79a407f58dac4e6154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47956885bdb96e450b4bedadf85c81f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#ad47956885bdb96e450b4bedadf85c81f">Get</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:ad47956885bdb96e450b4bedadf85c81f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#ad47956885bdb96e450b4bedadf85c81f">Get</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:ad47956885bdb96e450b4bedadf85c81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af64ac8c049f3b9fc8f3cce32a020f1cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#af64ac8c049f3b9fc8f3cce32a020f1cb">Post</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:af64ac8c049f3b9fc8f3cce32a020f1cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#af64ac8c049f3b9fc8f3cce32a020f1cb">Post</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:af64ac8c049f3b9fc8f3cce32a020f1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35c1dc179db078c3154f40a462f8dcf4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a35c1dc179db078c3154f40a462f8dcf4">Put</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:a35c1dc179db078c3154f40a462f8dcf4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a35c1dc179db078c3154f40a462f8dcf4">Put</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:a35c1dc179db078c3154f40a462f8dcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c0fed9f22871b45434dab6f939cacd9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a0c0fed9f22871b45434dab6f939cacd9">Delete</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:aa6926b9379b7b9c546ff633ed338dde7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#aa6926b9379b7b9c546ff633ed338dde7">Patch</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="separator:aa6926b9379b7b9c546ff633ed338dde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0fed9f22871b45434dab6f939cacd9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a0c0fed9f22871b45434dab6f939cacd9">Delete</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="separator:a0c0fed9f22871b45434dab6f939cacd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b56876902c79ed837133725b647c4cb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a2b56876902c79ed837133725b647c4cb">Route</a> (<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="classYaHTTP_1_1Response.html">Response</a> *resp)</td></tr>
-<tr class="separator:a2b56876902c79ed837133725b647c4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf6fcde31f36626c2334777db890814"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a1bf6fcde31f36626c2334777db890814">Any</a> (const std::string &amp;url, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> handler, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="separator:a1bf6fcde31f36626c2334777db890814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73100b36e85f267a83c2ef389d39eed"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#aa73100b36e85f267a83c2ef389d39eed">Route</a> (<a class="el" href="classYaHTTP_1_1Request.html">Request</a> *req, <a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> &amp;handler)</td></tr>
+<tr class="separator:aa73100b36e85f267a83c2ef389d39eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c03a696faa5011f312877051067ef6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#ac4c03a696faa5011f312877051067ef6">PrintRoutes</a> (std::ostream &amp;os)</td></tr>
 <tr class="separator:ac4c03a696faa5011f312877051067ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da4043d02a4e3a99b230f0902af55eb"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; std::string, <br class="typebreak"/>
 std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#a9da4043d02a4e3a99b230f0902af55eb">URLFor</a> (const std::string &amp;name, const <a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a> &amp;arguments)</td></tr>
 <tr class="separator:a9da4043d02a4e3a99b230f0902af55eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4a65e308ea9ce3fb7788cfaedd0790"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="namespaceYaHTTP.html#a0b219784409898bfb1e63ebf140d0999">TRouteList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Router.html#aaf4a65e308ea9ce3fb7788cfaedd0790">GetRoutes</a> ()</td></tr>
+<tr class="separator:aaf4a65e308ea9ce3fb7788cfaedd0790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -183,6 +189,46 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1bf6fcde31f36626c2334777db890814"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void YaHTTP::Router::Any </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0c0fed9f22871b45434dab6f939cacd9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +245,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -239,7 +285,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -263,7 +309,30 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a10ba424367b4639999dbddb165724b05"></a>
+<a class="anchor" id="aaf4a65e308ea9ce3fb7788cfaedd0790"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="namespaceYaHTTP.html#a0b219784409898bfb1e63ebf140d0999">TRouteList</a>&amp; YaHTTP::Router::GetRoutes </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac28ecb782f55191c3c35d41c7304ca14"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -282,8 +351,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
-          <td class="paramname"><em>hander</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -323,7 +392,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -349,6 +418,46 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa6926b9379b7b9c546ff633ed338dde7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void YaHTTP::Router::Patch </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af64ac8c049f3b9fc8f3cce32a020f1cb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +474,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -445,7 +554,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a3a40176c0a8c9255a38c36ea2a55ea6a">THandlerFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a>&#160;</td>
           <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
@@ -469,7 +578,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a078fc5c716ccf31a22fd109fe3be0bef"></a>
+<a class="anchor" id="a162be5455d5fb54cab7d758c7facc6dd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -482,8 +591,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classYaHTTP_1_1Response.html">Response</a> *&#160;</td>
-          <td class="paramname"><em>resp</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -495,7 +604,7 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2b56876902c79ed837133725b647c4cb"></a>
+<a class="anchor" id="aa73100b36e85f267a83c2ef389d39eed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -511,8 +620,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classYaHTTP_1_1Response.html">Response</a> *&#160;</td>
-          <td class="paramname"><em>resp</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a636957807dfdb22373788b828908f86a">THandlerFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -629,7 +738,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

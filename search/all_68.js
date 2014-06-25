@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['hasbody',['hasBody',['../classYaHTTP_1_1AsyncLoader.html#a92d4618fab046838d0fda51ede04add9',1,'YaHTTP::AsyncLoader']]],
   ['have_5fcpp_5ffunc_5fptr',['HAVE_CPP_FUNC_PTR',['../reqresp_8hpp.html#aed1e050e06e5645770030aad7e805707',1,'HAVE_CPP_FUNC_PTR():&#160;reqresp.hpp'],['../router_8hpp.html#aed1e050e06e5645770030aad7e805707',1,'HAVE_CPP_FUNC_PTR():&#160;router.hpp']]],
   ['have_5fcxx11',['HAVE_CXX11',['../yahttp-config_8h.html#adad73cb262d6d08e869992f5ba0e0f58',1,'yahttp-config.h']]],
   ['have_5fdlfcn_5fh',['HAVE_DLFCN_H',['../yahttp-config_8h.html#a0ee1617ff2f6885ef384a3dd46f9b9d7',1,'yahttp-config.h']]],
@@ -15,7 +16,7 @@ var searchData=
   ['headers',['headers',['../classYaHTTP_1_1HTTPBase.html#a0cd624d45ba6015d6ac43bfd4d1b4078',1,'YaHTTP::HTTPBase']]],
   ['host',['host',['../classYaHTTP_1_1URL.html#a060986361f383ffd02cdb488401009fa',1,'YaHTTP::URL']]],
   ['hours',['hours',['../classYaHTTP_1_1DateTime.html#a4382024e8074b8c611aec5ed319fbf31',1,'YaHTTP::DateTime']]],
-  ['httpbase',['HTTPBase',['../classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38',1,'YaHTTP::HTTPBase::HTTPBase()'],['../classYaHTTP_1_1HTTPBase.html#af0436abc52c235c40c95a1be9815ffd8',1,'YaHTTP::HTTPBase::HTTPBase(const HTTPBase &amp;rhs)']]],
   ['httpbase',['HTTPBase',['../classYaHTTP_1_1HTTPBase.html',1,'YaHTTP']]],
+  ['httpbase',['HTTPBase',['../classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38',1,'YaHTTP::HTTPBase::HTTPBase()'],['../classYaHTTP_1_1HTTPBase.html#af0436abc52c235c40c95a1be9815ffd8',1,'YaHTTP::HTTPBase::HTTPBase(const HTTPBase &amp;rhs)']]],
   ['httponly',['httponly',['../classYaHTTP_1_1Cookie.html#a51923ea7228453d564e03c4c708f23e9',1,'YaHTTP::Cookie']]]
 ];

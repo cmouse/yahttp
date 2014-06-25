@@ -133,6 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac806de787303159670d1ce5ba905bba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25b383acae32698400d253e93fca7b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#ab2115e6abd27099133a511e32a1daec4">strcookie_map_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#ae25b383acae32698400d253e93fca7b7">COOKIES</a> ()</td></tr>
 <tr class="separator:ae25b383acae32698400d253e93fca7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d983dfb63fa7afe5ce2897e87317086"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a5d983dfb63fa7afe5ce2897e87317086">str</a> () const </td></tr>
+<tr class="separator:a5d983dfb63fa7afe5ce2897e87317086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -154,8 +156,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac35231550ccab6d07b8d51b5b8818167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5cb566b46c89fefe8baaa2b966806c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a></td></tr>
 <tr class="separator:af5cb566b46c89fefe8baaa2b966806c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea548b30345d571f9ec5af3b39f625d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a></td></tr>
-<tr class="separator:a1ea548b30345d571f9ec5af3b39f625d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e217116080528b2f208bfb5cf2db549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a3e217116080528b2f208bfb5cf2db549">parameters</a></td></tr>
+<tr class="separator:a3e217116080528b2f208bfb5cf2db549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f1320a54983e6f8438a75ef2b10537"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a66f1320a54983e6f8438a75ef2b10537">routeName</a></td></tr>
+<tr class="separator:a66f1320a54983e6f8438a75ef2b10537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb51261b5016d0781be2b6551cd2ab4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a></td></tr>
 <tr class="separator:aacb51261b5016d0781be2b6551cd2ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511e55bc3c6d8784a582e47661e9e981"><td class="memItemLeft" align="right" valign="top">funcptr::function&lt; size_t(const <br class="typebreak"/>
@@ -169,7 +173,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4e959209f43c4091b4de511fcbc0015b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a4e959209f43c4091b4de511fcbc0015b">operator=</a> (const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> &amp;rhs)</td></tr>
 <tr class="separator:a4e959209f43c4091b4de511fcbc0015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for request and response </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac6974c85091436027ec9de5999c86c38"></a>
 <div class="memitem">
 <div class="memproto">
@@ -311,6 +317,29 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5d983dfb63fa7afe5ce2897e87317086"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string YaHTTP::HTTPBase::str </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adb83f37e7a89ca7f808d0e0abe3ebed0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -400,12 +429,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1ea548b30345d571f9ec5af3b39f625d"></a>
+<a class="anchor" id="a3e217116080528b2f208bfb5cf2db549"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a> YaHTTP::HTTPBase::params</td>
+          <td class="memname"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a> YaHTTP::HTTPBase::parameters</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -430,6 +459,18 @@ Protected Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">funcptr::function&lt;size_t(const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a>*,std::ostream&amp;)&gt; YaHTTP::HTTPBase::renderer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66f1320a54983e6f8438a75ef2b10537"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string YaHTTP::HTTPBase::routeName</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -479,7 +520,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

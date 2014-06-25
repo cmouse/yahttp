@@ -120,8 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae196242944cdd1d9a7ba5f447eb8812e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af241df049860ea3669c0893cccb520b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classYaHTTP_1_1Request.html">Request</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Request.html#af241df049860ea3669c0893cccb520b1">operator=</a> (const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> &amp;rhs)</td></tr>
 <tr class="separator:af241df049860ea3669c0893cccb520b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be78deabfa6d997aeaf5d93807e042a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Request.html#a6be78deabfa6d997aeaf5d93807e042a">prepareAsPost</a> (<a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bd">postformat_t</a> format=<a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bda740693c15af4ce8b4b83be08a7873e33">urlencoded</a>)</td></tr>
-<tr class="separator:a6be78deabfa6d997aeaf5d93807e042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302238aff8201e8521aaf47a180f6fd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Request.html#a302238aff8201e8521aaf47a180f6fd7">setup</a> (const std::string &amp;<a class="el" href="classYaHTTP_1_1HTTPBase.html#a5d3236818e1be6ae232b366c483d64b2">method</a>, const std::string &amp;<a class="el" href="classYaHTTP_1_1HTTPBase.html#ab9549dc2e377575cf2569218c9425f9e">url</a>)</td></tr>
+<tr class="separator:a302238aff8201e8521aaf47a180f6fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39108ac20f2be95355a1d12b7664aea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1Request.html#a39108ac20f2be95355a1d12b7664aea4">preparePost</a> (<a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bd">postformat_t</a> format=<a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bda740693c15af4ce8b4b83be08a7873e33">urlencoded</a>)</td></tr>
+<tr class="separator:a39108ac20f2be95355a1d12b7664aea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classYaHTTP_1_1HTTPBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classYaHTTP_1_1HTTPBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classYaHTTP_1_1HTTPBase.html">YaHTTP::HTTPBase</a></td></tr>
 <tr class="memitem:ac6974c85091436027ec9de5999c86c38 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38">HTTPBase</a> ()</td></tr>
 <tr class="separator:ac6974c85091436027ec9de5999c86c38 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac806de787303159670d1ce5ba905bba0 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25b383acae32698400d253e93fca7b7 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#ab2115e6abd27099133a511e32a1daec4">strcookie_map_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#ae25b383acae32698400d253e93fca7b7">COOKIES</a> ()</td></tr>
 <tr class="separator:ae25b383acae32698400d253e93fca7b7 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d983dfb63fa7afe5ce2897e87317086 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a5d983dfb63fa7afe5ce2897e87317086">str</a> () const </td></tr>
+<tr class="separator:a5d983dfb63fa7afe5ce2897e87317086 inherit pub_methods_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -162,8 +166,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac35231550ccab6d07b8d51b5b8818167 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5cb566b46c89fefe8baaa2b966806c5 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#af5cb566b46c89fefe8baaa2b966806c5">getvars</a></td></tr>
 <tr class="separator:af5cb566b46c89fefe8baaa2b966806c5 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea548b30345d571f9ec5af3b39f625d inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a1ea548b30345d571f9ec5af3b39f625d">params</a></td></tr>
-<tr class="separator:a1ea548b30345d571f9ec5af3b39f625d inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e217116080528b2f208bfb5cf2db549 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a30a89a143d1e01fd925121600ced162b">strstr_map_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a3e217116080528b2f208bfb5cf2db549">parameters</a></td></tr>
+<tr class="separator:a3e217116080528b2f208bfb5cf2db549 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f1320a54983e6f8438a75ef2b10537 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a66f1320a54983e6f8438a75ef2b10537">routeName</a></td></tr>
+<tr class="separator:a66f1320a54983e6f8438a75ef2b10537 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb51261b5016d0781be2b6551cd2ab4 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#aacb51261b5016d0781be2b6551cd2ab4">body</a></td></tr>
 <tr class="separator:aacb51261b5016d0781be2b6551cd2ab4 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511e55bc3c6d8784a582e47661e9e981 inherit pub_attribs_classYaHTTP_1_1HTTPBase"><td class="memItemLeft" align="right" valign="top">funcptr::function&lt; size_t(const <br class="typebreak"/>
@@ -248,7 +254,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6be78deabfa6d997aeaf5d93807e042a"></a>
+<a class="anchor" id="a39108ac20f2be95355a1d12b7664aea4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -256,11 +262,45 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void YaHTTP::Request::prepareAsPost </td>
+          <td class="memname">void YaHTTP::Request::preparePost </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bd">postformat_t</a>&#160;</td>
           <td class="paramname"><em>format</em> = <code><a class="el" href="namespaceYaHTTP.html#a7113183142e1eadcdeac96a844df93bda740693c15af4ce8b4b83be08a7873e33">urlencoded</a></code>)</td><td></td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a302238aff8201e8521aaf47a180f6fd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void YaHTTP::Request::setup </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -347,7 +387,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

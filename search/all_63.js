@@ -9,5 +9,5 @@ var searchData=
   ['cookie_5fstr',['cookie_str',['../classYaHTTP_1_1DateTime.html#a2072e72b3644abc6943de526602f9560',1,'YaHTTP::DateTime']]],
   ['cookiejar',['CookieJar',['../classYaHTTP_1_1CookieJar.html',1,'YaHTTP']]],
   ['cookiejar',['CookieJar',['../classYaHTTP_1_1CookieJar.html#a1a6347f8fb3738c5002df74c9a9a0505',1,'YaHTTP::CookieJar::CookieJar()'],['../classYaHTTP_1_1CookieJar.html#ae0c1b1004189e4e98d11523a950d4c24',1,'YaHTTP::CookieJar::CookieJar(const CookieJar &amp;rhs)']]],
-  ['cookies',['cookies',['../classYaHTTP_1_1CookieJar.html#a938123ea4f5e77a99c9c313d72456b26',1,'YaHTTP::CookieJar::cookies()'],['../classYaHTTP_1_1HTTPBase.html#ae25b383acae32698400d253e93fca7b7',1,'YaHTTP::HTTPBase::COOKIES()']]]
+  ['cookies',['COOKIES',['../classYaHTTP_1_1HTTPBase.html#ae25b383acae32698400d253e93fca7b7',1,'YaHTTP::HTTPBase::COOKIES()'],['../classYaHTTP_1_1CookieJar.html#a938123ea4f5e77a99c9c313d72456b26',1,'YaHTTP::CookieJar::cookies()']]]
 ];

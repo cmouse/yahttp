@@ -1,10 +1,10 @@
 <map id="/home/cmouse/projects/libyahttp/yahttp/router.cpp" name="/home/cmouse/projects/libyahttp/yahttp/router.cpp">
-<area shape="rect" id="node3" href="$yahttp_8hpp.html" title="yahttp.hpp" alt="" coords="648,101,731,131"/>
-<area shape="rect" id="node50" href="$router_8hpp.html" title="router.hpp" alt="" coords="1389,101,1469,131"/>
-<area shape="rect" id="node23" href="$yahttp-config_8h.html" title="yahttp&#45;config.h" alt="" coords="413,179,520,208"/>
-<area shape="rect" id="node25" href="$url_8hpp.html" title="url.hpp" alt="" coords="69,179,131,208"/>
-<area shape="rect" id="node30" href="$utility_8hpp.html" title="utility.hpp" alt="" coords="340,256,417,285"/>
-<area shape="rect" id="node33" href="$exception_8hpp.html" title="exception.hpp" alt="" coords="595,179,696,208"/>
-<area shape="rect" id="node37" href="$cookie_8hpp.html" title="cookie.hpp" alt="" coords="771,179,856,208"/>
-<area shape="rect" id="node39" href="$reqresp_8hpp.html" title="reqresp.hpp" alt="" coords="949,179,1040,208"/>
+<area shape="rect" id="node3" href="$yahttp_8hpp.html" title="yahttp.hpp" alt="" coords="692,101,775,131"/>
+<area shape="rect" id="node52" href="$router_8hpp.html" title="router.hpp" alt="" coords="1407,101,1487,131"/>
+<area shape="rect" id="node25" href="$yahttp-config_8h.html" title="yahttp&#45;config.h" alt="" coords="413,179,520,208"/>
+<area shape="rect" id="node27" href="$url_8hpp.html" title="url.hpp" alt="" coords="69,179,131,208"/>
+<area shape="rect" id="node32" href="$utility_8hpp.html" title="utility.hpp" alt="" coords="340,256,417,285"/>
+<area shape="rect" id="node35" href="$exception_8hpp.html" title="exception.hpp" alt="" coords="595,179,696,208"/>
+<area shape="rect" id="node39" href="$cookie_8hpp.html" title="cookie.hpp" alt="" coords="771,179,856,208"/>
+<area shape="rect" id="node41" href="$reqresp_8hpp.html" title="reqresp.hpp" alt="" coords="880,179,971,208"/>
 </map>

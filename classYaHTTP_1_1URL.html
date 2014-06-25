@@ -148,13 +148,17 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a79ff3d3ff7e3c10e3e14457946b2973b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02cc0ca8e82984d7c081a20855d4eb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1URL.html#aa02cc0ca8e82984d7c081a20855d4eb9">parseAnchor</a> (const std::string &amp;url, size_t &amp;pos)</td></tr>
 <tr class="separator:aa02cc0ca8e82984d7c081a20855d4eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62643a3399a3c5f1622dad9d908f09c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1URL.html#a62643a3399a3c5f1622dad9d908f09c7">initialize</a> ()</td></tr>
+<tr class="separator:a62643a3399a3c5f1622dad9d908f09c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ae73a26a3fca1ee3ec987410a5c1510ba"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1URL.html#ae73a26a3fca1ee3ec987410a5c1510ba">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classYaHTTP_1_1URL.html">URL</a> &amp;url)</td></tr>
 <tr class="separator:ae73a26a3fca1ee3ec987410a5c1510ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classYaHTTP_1_1URL.html">URL</a> parser and container </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4e025bf8b9ad61193e096422a700a1e8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -227,6 +231,29 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a62643a3399a3c5f1622dad9d908f09c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void YaHTTP::URL::initialize </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8bd2b0fe33ff18d878bd1376d1a3121b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -510,6 +537,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>parse various formats of urls ranging from <a href="http://example.com/foo?bar=baz">http://example.com/foo?bar=baz</a> into data:base64:d089swt64wt... </p>
 
 </div>
 </div>
@@ -628,7 +656,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 14:56:13 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 25 2014 23:27:07 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>
