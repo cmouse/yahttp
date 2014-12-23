@@ -101,8 +101,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5de43a81c141c55ca5507c6b833d687e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#a5de43a81c141c55ca5507c6b833d687e">SendBodyRender</a> ()</td></tr>
 <tr class="separator:a5de43a81c141c55ca5507c6b833d687e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf4d1a98592c7234b70a52595bca513"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#afdf4d1a98592c7234b70a52595bca513">operator()</a> (const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream &amp;os) const </td></tr>
-<tr class="separator:afdf4d1a98592c7234b70a52595bca513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d36915f50d0319cd05685c8d6575ce6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase_1_1SendBodyRender.html#a1d36915f50d0319cd05685c8d6575ce6">operator()</a> (const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *doc, std::ostream &amp;os, bool chunked) const </td></tr>
+<tr class="separator:a1d36915f50d0319cd05685c8d6575ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default renderer for request/response, simply copies body to response </p>
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="afdf4d1a98592c7234b70a52595bca513"></a>
+<a class="anchor" id="a1d36915f50d0319cd05685c8d6575ce6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -148,7 +148,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>chunked</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -171,7 +177,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 23 2014 10:59:34 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 23 2014 18:43:41 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

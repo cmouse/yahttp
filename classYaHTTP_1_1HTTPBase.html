@@ -125,6 +125,8 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6974c85091436027ec9de5999c86c38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#ac6974c85091436027ec9de5999c86c38">HTTPBase</a> ()</td></tr>
 <tr class="separator:ac6974c85091436027ec9de5999c86c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14491fba99a5122762202e911e205415"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a14491fba99a5122762202e911e205415">initialize</a> ()</td></tr>
+<tr class="separator:a14491fba99a5122762202e911e205415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb83f37e7a89ca7f808d0e0abe3ebed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#adb83f37e7a89ca7f808d0e0abe3ebed0">write</a> (std::ostream &amp;os) const </td></tr>
 <tr class="separator:adb83f37e7a89ca7f808d0e0abe3ebed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9db0093dd756a89114985da54a139e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceYaHTTP.html#a737aaf9e9c9a53376831b84d9645136f">strstr_map_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#ab9db0093dd756a89114985da54a139e5">GET</a> ()</td></tr>
@@ -166,9 +168,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ad89e661ad2e72e65dd5739208afbde31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a805510d2fa4f0709855f331cd21c69a8"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a805510d2fa4f0709855f331cd21c69a8">max_response_size</a></td></tr>
 <tr class="separator:a805510d2fa4f0709855f331cd21c69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a511e55bc3c6d8784a582e47661e9e981"><td class="memItemLeft" align="right" valign="top">funcptr::function&lt; size_t(const <br class="typebreak"/>
-<a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *, std::ostream &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a511e55bc3c6d8784a582e47661e9e981">renderer</a></td></tr>
-<tr class="separator:a511e55bc3c6d8784a582e47661e9e981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67842a6949410634aafa9c158b9fd4c3"><td class="memItemLeft" align="right" valign="top">funcptr::function&lt; size_t(const <br class="typebreak"/>
+<a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a> *, std::ostream <br class="typebreak"/>
+&amp;, bool)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1HTTPBase.html#a67842a6949410634aafa9c158b9fd4c3">renderer</a></td></tr>
+<tr class="separator:a67842a6949410634aafa9c158b9fd4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -271,6 +274,31 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14491fba99a5122762202e911e205415"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void YaHTTP::HTTPBase::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classYaHTTP_1_1Request.html#ad016ad5b3667eeea2432df52f4a35fc3">YaHTTP::Request</a>, and <a class="el" href="classYaHTTP_1_1Response.html#a917b2ab84cf8f60c32096521827f5a07">YaHTTP::Response</a>.</p>
 
 </div>
 </div>
@@ -481,12 +509,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a511e55bc3c6d8784a582e47661e9e981"></a>
+<a class="anchor" id="a67842a6949410634aafa9c158b9fd4c3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">funcptr::function&lt;size_t(const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a>*,std::ostream&amp;)&gt; YaHTTP::HTTPBase::renderer</td>
+          <td class="memname">funcptr::function&lt;size_t(const <a class="el" href="classYaHTTP_1_1HTTPBase.html">HTTPBase</a>*,std::ostream&amp;,bool)&gt; YaHTTP::HTTPBase::renderer</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -548,7 +576,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 23 2014 10:59:34 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 23 2014 18:43:41 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
