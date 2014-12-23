@@ -1,5 +1,5 @@
 <map id="YaHTTP::Request" name="YaHTTP::Request">
-<area shape="rect" id="node2" href="$classYaHTTP_1_1HTTPBase.html" title="YaHTTP::HTTPBase" alt="" coords="75,101,221,131"/>
-<area shape="rect" id="node4" href="$classYaHTTP_1_1CookieJar.html" title="YaHTTP::CookieJar" alt="" coords="5,5,144,35"/>
-<area shape="rect" id="node6" href="$classYaHTTP_1_1URL.html" title="YaHTTP::URL" alt="" coords="168,5,275,35"/>
+<area shape="rect" id="node2" href="$classYaHTTP_1_1HTTPBase.html" title="YaHTTP::HTTPBase" alt="" coords="75,96,221,123"/>
+<area shape="rect" id="node3" href="$classYaHTTP_1_1CookieJar.html" title="YaHTTP::CookieJar" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node4" href="$classYaHTTP_1_1URL.html" title="YaHTTP::URL" alt="" coords="169,5,276,32"/>
 </map>

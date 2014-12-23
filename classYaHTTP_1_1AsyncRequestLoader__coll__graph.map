@@ -1,7 +1,7 @@
 <map id="YaHTTP::AsyncRequestLoader" name="YaHTTP::AsyncRequestLoader">
-<area shape="rect" id="node2" href="$classYaHTTP_1_1AsyncLoader.html" title="YaHTTP::AsyncLoader\l\&lt; Request \&gt;" alt="" coords="69,278,227,325"/>
-<area shape="rect" id="node4" href="$classYaHTTP_1_1Request.html" title="YaHTTP::Request" alt="" coords="83,181,213,211"/>
-<area shape="rect" id="node6" href="$classYaHTTP_1_1HTTPBase.html" title="YaHTTP::HTTPBase" alt="" coords="75,101,221,131"/>
-<area shape="rect" id="node8" href="$classYaHTTP_1_1CookieJar.html" title="YaHTTP::CookieJar" alt="" coords="5,5,144,35"/>
-<area shape="rect" id="node10" href="$classYaHTTP_1_1URL.html" title="YaHTTP::URL" alt="" coords="168,5,275,35"/>
+<area shape="rect" id="node2" href="$classYaHTTP_1_1AsyncLoader.html" title="YaHTTP::AsyncLoader\l\&lt; Request \&gt;" alt="" coords="69,265,227,306"/>
+<area shape="rect" id="node3" href="$classYaHTTP_1_1Request.html" title="YaHTTP::Request" alt="" coords="83,173,212,200"/>
+<area shape="rect" id="node4" href="$classYaHTTP_1_1HTTPBase.html" title="YaHTTP::HTTPBase" alt="" coords="75,96,221,123"/>
+<area shape="rect" id="node5" href="$classYaHTTP_1_1CookieJar.html" title="YaHTTP::CookieJar" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node6" href="$classYaHTTP_1_1URL.html" title="YaHTTP::URL" alt="" coords="169,5,276,32"/>
 </map>
