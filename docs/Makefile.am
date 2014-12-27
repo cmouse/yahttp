@@ -1,6 +1,8 @@
-EXTRA_DIST = html yahttp.cfg
+dist_html_DATA = html
 
-all-local:
+all-local: html
+
+html:
 	$(DOXYGEN) yahttp.cfg
 
 clean-local:
