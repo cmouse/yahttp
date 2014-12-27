@@ -11,6 +11,10 @@ before_script:
 script:
  - ./autogen.sh
  - ./configure
+ - make dist
+ - tar xvzf yahttp-git.tar.gz
+ - cd yahttp-git
+ - ./configure
  - make
  - make check
 #addons:
