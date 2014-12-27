@@ -1,0 +1,17 @@
+.PHONY: all clean check distclean
+DOXYGEN=@DOXYGEN@
+
+all:
+	$(DOXYGEN) yahttp.cfg
+
+check:
+	true
+
+distdir: all
+	cp -r html $(distdir)
+	cp yahttp.cfg $(distdir)
+
+clean:
+	rm -rf html
+
+distclean: clean
