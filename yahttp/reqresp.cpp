@@ -38,7 +38,15 @@ namespace YaHTTP {
         } else if(target->kind == YAHTTP_TYPE_RESPONSE) {
           std::string ver;
           std::istringstream iss(line);
-          iss >> ver >> target->status >> target->statusText;
+          std::string::size_type pos1;
+          iss >> ver >> target->status;
+          std::getline(iss, target->statusText);
+          pos1=0;
+          while(pos1 < target->statusText.size() && ::isspace(target->statusText.at(pos1))) pos1++;
+          target->statusText = target->statusText.substr(pos1); 
+          if ((pos1 = target->statusText.find("\r")) != std::string::npos) {
+            target->statusText = target->statusText.substr(0, pos1-1);
+          }
           if (ver.size() == 0) {
             target->version = 9;
           } else if (ver.find("HTTP/0.9") == 0)
