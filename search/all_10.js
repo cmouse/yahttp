@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['ready',['ready',['../classYaHTTP_1_1AsyncLoader.html#a7d5e8a22d4e08d69abb4c7edef600403',1,'YaHTTP::AsyncLoader']]],
   ['reason',['reason',['../classYaHTTP_1_1Error.html#a655e46f6ad2b8c8580e7280dfe2d53ef',1,'YaHTTP::Error']]],
   ['renderer',['renderer',['../classYaHTTP_1_1HTTPBase.html#a67842a6949410634aafa9c158b9fd4c3',1,'YaHTTP::HTTPBase']]],

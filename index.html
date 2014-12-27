@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Yet Another HTTP Library: Yet Another HTTP Library Documentation</title>
+<title>Yet Another HTTP Library: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -76,26 +76,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Yet Another HTTP Library Documentation </div>  </div>
+<div class="title">Yet Another HTTP Library Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="sec_quick_start"></a>
-Quick start example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="yahttp_8hpp.html">yahttp/yahttp.hpp</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">  std::ifstream ifs(<span class="stringliteral">&quot;request.txt&quot;</span>);</div>
-<div class="line">  <a class="code" href="classYaHTTP_1_1Request.html">YaHTTP::Request</a> req;</div>
-<div class="line">  ifs &gt;&gt; req;</div>
-<div class="line"></div>
-<div class="line">  std::cout &lt;&lt; req.<a class="code" href="classYaHTTP_1_1HTTPBase.html#a5d3236818e1be6ae232b366c483d64b2">method</a> <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req.url.path &lt;&lt; std::endl;</div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> <dl class="section author"><dt>Author</dt><dd>Aki Tuomi </dd></dl>
+<div class="textblock"><p><a class="el" href="namespaceYaHTTP.html">YaHTTP</a> aims to be a pure http request/response parser that has no IO ties. It is intended to be used on small-footprint applications and other utilities that want to use HTTP over something else than network IO.</p>
+<p><a href="https://travis-ci.org/cmouse/yahttp">![Build Status](https://travis-ci.org/cmouse/yahttp.svg?branch=master)</a> <a href="https://scan.coverity.com/projects/2161">![Coverity Scan Build Status](https://scan.coverity.com/projects/2161/badge.svg)</a></p>
+<h2>WARNINGS </h2>
+<p>If you are upgrading from version before May 02, 2014 - <em>PLEASE BE SURE TO CHECK THAT EVERYTHING WORKS AS EXPECTED</em>. There has been complete overhaul of the library and many things have changed.</p>
+<h2>NOTES </h2>
+<p>Do not use resp = req, or resp(req) to build the response object, despite it being supported. This will cause request headers to get duplicated. Also, you <em>must</em> set response::version to request::version if you intend to support older than HTTP/1.1 clients. Set response::status to at least 200, it won't be done for you. No Server or Product token is sent either, you can add those if you want.</p>
+<p>If you do not want to send chunked responses, set content-length header. Setting this header will always disable chunked responses. This will also happen if you downgrade your responses to version 10 or 9.</p>
+<h2>Integration guide </h2>
+<p>Here are some instructions on how to integrate <a class="el" href="namespaceYaHTTP.html">YaHTTP</a> into your project.</p>
+<h2>With automake and libtool </h2>
+<p>If you don't need router or any of the C++11 features, you can just create empty <a class="el" href="yahttp-config_8h.html">yahttp-config.h</a>, or symlink it to your project's config.h for the <a class="el" href="yahttp_8hpp.html">yahttp.hpp</a> to include. Then just put this stuff into it's own folder and create Makefile.am with following contents (you can change the compilation flags):</p>
+<p>``` noinst_LTLIBRARIES=libyahttp.la libyahttp_la_CXXFLAGS=  -D__STRICT_ANSI__ libyahttp_la_SOURCES=<a class="el" href="cookie_8hpp.html">cookie.hpp</a> <a class="el" href="exception_8hpp.html">exception.hpp</a> <a class="el" href="reqresp_8cpp.html">reqresp.cpp</a> <a class="el" href="reqresp_8hpp.html">reqresp.hpp</a> <a class="el" href="router_8cpp.html">router.cpp</a> <a class="el" href="router_8hpp.html">router.hpp</a> <a class="el" href="url_8hpp.html">url.hpp</a> <a class="el" href="utility_8hpp.html">utility.hpp</a> <a class="el" href="yahttp_8hpp.html">yahttp.hpp</a> ```</p>
+<p>You can define RELRO and PIE to match your project.</p>
+<p>To compile your project use -Lpath/to/yahttp -lyahttp</p>
+<p>If you need router, additionally check for boost or C++11 and replace <a class="el" href="yahttp-config_8h.html">yahttp-config.h</a> to config.h in <a class="el" href="yahttp_8hpp.html">yahttp.hpp</a> or add relevant options to your compiler CXXFLAGS. See below for the flags.</p>
+<h2>Without automake </h2>
+<p>Create simple Makefile with contents for C++11:</p>
+<p>``` OBJECTS=reqresp.o router.o CXX=gcc CXXFLAGS=-W -Wall -DHAVE_CXX11 -std=c++11 ```</p>
+<p>Or create simple Makefile with contents for boost:</p>
+<p>``` OBJECTS=reqresp.o router.o CXX=gcc CXXFLAGS=-W -Wall -DHAVE_BOOST ```</p>
+<p>Or if you don't need either one, just:</p>
+<p>``` OBJECTS=reqresp.o CXX=gcc CXXFLAGS=-W -Wall ```</p>
+<p><a class="el" href="namespaceYaHTTP.html">YaHTTP</a> include files can be placed where the rest of your includes are. Then just add your own code there and it should work just fine. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 27 2014 16:17:15 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 27 2014 16:23:05 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
