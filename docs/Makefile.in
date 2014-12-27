@@ -1,7 +1,8 @@
 .PHONY: all clean check distclean
+DOXYGEN=@DOXYGEN@
 
 all:
-	doxygen yahttp.cfg
+	$(DOXYGEN) yahttp.cfg
 
 check:
 	true

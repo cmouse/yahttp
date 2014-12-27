@@ -32,5 +32,7 @@ if test "$boost" == ""; then
   BOOST_TEST
 fi
 
-AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile])
+AC_CHECK_PROG([DOXYGEN], [doxygen], [doxygen], [true])
+
+AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile])
 AC_OUTPUT
