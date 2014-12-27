@@ -1,4 +1,5 @@
 dist_html_DATA = html
+EXTRA_DIST = yahttp.cfg
 
 all-local: html
 
