@@ -17,6 +17,7 @@ BOOST_AUTO_TEST_CASE(test_request_parse_get)
   ifs >> req;
   
   BOOST_CHECK_EQUAL(req.method, "GET");
+  BOOST_CHECK_EQUAL(req.version, 11);
   BOOST_CHECK_EQUAL(req.url.path, "/");
   BOOST_CHECK_EQUAL(req.url.host, "test.org");
   BOOST_CHECK_EQUAL(req.headers["accept-encoding"], "gzip, deflate");
