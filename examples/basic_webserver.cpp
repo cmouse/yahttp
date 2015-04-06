@@ -123,24 +123,21 @@ public:
     rr.resp.headers["content-type"] = "text/html; charset=utf-8";
     rr.resp.headers["connection"] = "close";
     rr.resp.version = rr.req.version;
+    rr.resp.url = rr.req.url;
 
     if (rr.req.url.path == "/") {
-      rr.resp.url = rr.req.url;
       rr.resp.status = 200; 
       rr.resp.body = "<!DOCTYPE html>\n<html lang=\"en\"><head><title>Hello, world</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /></head><body><h1>200 OK</h1><p>Hello, world</p></body></html>";
     } else if (rr.req.url.path == "/style.css") {
-      rr.resp.url = rr.req.url;
       rr.resp.status = 200;
       rr.resp.headers["content-type"] = "text/css; charset=utf-8";
       rr.resp.renderer = YaHTTP::HTTPBase::SendFileRender("style.css");
     } else if (rr.req.url.path == "/bg.jpg") {
-      rr.resp.url = rr.req.url;
       rr.resp.status = 200;
       rr.resp.headers["content-type"] = "image/jpeg";
 //      rr.resp.headers["content-length"] = "810816";
       rr.resp.renderer = YaHTTP::HTTPBase::SendFileRender("bg.jpg");
     } else {
-      rr.resp.url = rr.req.url;
       rr.resp.status = 404;
       rr.resp.body = "<!DOCTYPE html>\n<html lang=\"en\"><head><title>404 Not Found</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /></head><body><h1>404 Not Found</h1><p>Requested URL not found</p></body></html>";
     }
