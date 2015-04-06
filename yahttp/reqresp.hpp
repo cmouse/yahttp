@@ -237,7 +237,7 @@ public:
     }
     void initialize(const HTTPBase& rhs) {
       HTTPBase::initialize();
-      this->kind = YAHTTP_TYPE_RESPONSE;
+      this->kind = YAHTTP_TYPE_REQUEST;
       // copy SOME attributes
       this->url = rhs.url;
       this->method = rhs.method;
