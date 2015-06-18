@@ -24,3 +24,8 @@ tests/*.trs
 *.lo
 aclocal.m4
 libtool
+*.gcov
+*.gcda
+*.gcno
+tests/coverage.info
+*.tar.gz
