@@ -122,4 +122,16 @@ BOOST_AUTO_TEST_CASE(test_response_print_chunked) {
   BOOST_CHECK_EQUAL(oss.str(), "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=utf-8\r\n\r\nb8\r\n<!DOCTYPE html>\n<html lang=\"en\"><head><title>Hello, world</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /></head><body><h1>200 OK</h1><p>Hello, world</p></body></html>\r\n0\r\n\r\n");
 }
 
+BOOST_AUTO_TEST_CASE(test_response_empty_chunked) {
+  YaHTTP::Response resp;
+  std::ostringstream oss;
+  resp.status = 201;
+  resp.headers["content-type"] = "text/html; charset=utf-8";
+  resp.headers["content-length"] = "0";
+  resp.body = "";
+
+  oss << resp;
+  BOOST_CHECK_EQUAL(oss.str(), "HTTP/1.1 201 Created\r\nContent-Length: 0\r\nContent-Type: text/html; charset=utf-8\r\n\r\n");
+}
+
 }
