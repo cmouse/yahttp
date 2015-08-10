@@ -5,9 +5,12 @@ language: cpp
 compiler:
   - gcc
   - clang
-before_script:
- - sudo apt-get update
- - sudo apt-get install --no-install-recommends libboost-test-dev doxygen graphviz
+addons:
+ apt:
+  packages:
+   - libboost-test-dev
+   - doxygen
+   - graphviz
 script:
  - ./autogen.sh
  - ./configure
@@ -17,6 +20,7 @@ script:
  - ./configure
  - make
  - make check
+sudo: false
 #addons:
 #  coverity_scan:
 #    project:
