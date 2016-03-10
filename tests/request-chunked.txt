@@ -3,7 +3,7 @@ Host: localhost:8084
 Connection: close
 Content-Type: application/json
 Authorization: Basic d2ZvcmNlOnN1cGVy
-Content-Transfer-Encoding: chunked
+Transfer-Encoding: chunked
 
 0037
 {"login":"cmouse","pwhash":"1234","remote":"127.0.0.1"}
