@@ -108,4 +108,12 @@ BOOST_AUTO_TEST_CASE(test_request_issue_7)
   BOOST_CHECK_THROW(ifs>>req, YaHTTP::ParseError);
 }
 
+BOOST_AUTO_TEST_CASE(test_request_chunked)
+{
+  YaHTTP::Request req;
+  std::ifstream ifs("request-chunked.txt");
+  ifs>>req;
+  BOOST_CHECK_EQUAL(req.body, "{\"login\":\"cmouse\",\"pwhash\":\"1234\",\"remote\":\"127.0.0.1\"}");
+}
+
 }
