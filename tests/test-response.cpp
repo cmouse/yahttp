@@ -134,4 +134,16 @@ BOOST_AUTO_TEST_CASE(test_response_empty_chunked) {
   BOOST_CHECK_EQUAL(oss.str(), "HTTP/1.1 201 Created\r\nContent-Length: 0\r\nContent-Type: text/html; charset=utf-8\r\n\r\n");
 }
 
+BOOST_AUTO_TEST_CASE(test_response_content_length) {
+  YaHTTP::Response resp;
+  std::ostringstream oss;
+  resp.status = 200;
+  resp.headers["content-type"] = "text/html; charset=utf-8";
+  resp.headers["content-length"] = "12";
+  resp.body = "hello, world";
+
+  oss << resp;
+  BOOST_CHECK_EQUAL(oss.str(), "HTTP/1.1 200 OK\r\nContent-Length: 12\r\nContent-Type: text/html; charset=utf-8\r\n\r\nhello, world");
+}
+
 }
