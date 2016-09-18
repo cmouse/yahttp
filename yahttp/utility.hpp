@@ -330,7 +330,7 @@ namespace YaHTTP {
        case 417:
            return "Expectation Failed";
        case 422:
-           return "Unprocessable Entity"
+           return "Unprocessable Entity";
        case 500:
            return "Internal Server Error";
        case 501:
