@@ -21,3 +21,12 @@ script:
 - make
 - make check
 sudo: false
+addons:
+  coverity_scan:
+    project:
+      name: "cmouse/yahttp"
+      description: "Yet Another HTTP Library"
+    notification_email: cmouse@desteem.org
+    build_command_prepend: "./autogen.sh && ./configure"
+    build_command: make
+    branch_pattern: master
