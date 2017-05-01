@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yet_20another_20http_20library_20documentation',['Yet Another HTTP Library Documentation',['../index.html',1,'']]]
+  ['yet_20another_20http_20library',['Yet Another HTTP Library',['../index.html',1,'']]]
 ];
