@@ -30,13 +30,14 @@ BOOST_AUTO_TEST_CASE(test_cookie_parse)
   YaHTTP::CookieJar jar;
  
   const std::vector<std::string> tests = boost::assign::list_of
-     ("hello%20world=world%20hello")
-     ("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT")
-     ("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test")
-     ("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test; httpOnly")
-     ("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test; secure");
+     (std::string("hello%20world=world%20hello"))
+     (std::string("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT"))
+     (std::string("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test"))
+     (std::string("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test; httpOnly"))
+     (std::string("hello%20world=world%20hello; expires=05-May-2014 00:17:36 GMT; domain=test.org; path=/test; secure"));
 
-  for(const auto &cookie: tests) {
+  for(int i = 0; i < tests.size(); i++) {
+    const std::string &cookie = tests[i];
     jar.parseSetCookieHeader(cookie);
     BOOST_CHECK_EQUAL(jar.cookies["hello world"].str(), cookie);
   }
