@@ -242,7 +242,7 @@ namespace YaHTTP {
       os << Utility::camelizeHeader(iter->first) << ": " << iter->second << "\r\n";
       iter++;
     }
-    if (!cookieSent && jar.cookies.size() > 0) { // write cookies
+    if (version > 9 && !cookieSent && jar.cookies.size() > 0) { // write cookies
       for(strcookie_map_t::const_iterator i = jar.cookies.begin(); i != jar.cookies.end(); i++) {
         if (kind == YAHTTP_TYPE_REQUEST) {
           os << "Cookie: ";
