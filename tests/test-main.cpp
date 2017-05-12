@@ -3,3 +3,11 @@
 #define BOOST_TEST_MODULE unit
 
 #include <boost/test/unit_test.hpp>
+
+struct MyConfig {
+  MyConfig() {
+    std::setlocale(LC_ALL, "C");
+  }
+};
+
+BOOST_GLOBAL_FIXTURE( MyConfig );

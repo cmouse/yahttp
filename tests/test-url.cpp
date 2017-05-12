@@ -21,6 +21,14 @@ BOOST_AUTO_TEST_CASE(test_url_complete) {
   BOOST_CHECK_EQUAL(url.to_string(), "https://shaun:sheep@test.org:62362/something/somewhere+and+another/%CA%CF.json?boo=baa&faa=fii#anchor1234"); 
 }
 
+BOOST_AUTO_TEST_CASE(test_url_username) {
+  YaHTTP::URL url("https://shaun@test.org/");
+  BOOST_CHECK_EQUAL(url.protocol, "https");
+  BOOST_CHECK_EQUAL(url.host, "test.org");
+  BOOST_CHECK_EQUAL(url.username, "shaun");
+  BOOST_CHECK_EQUAL(url.to_string(), "https://shaun@test.org/");
+}
+
 BOOST_AUTO_TEST_CASE(test_url_path) {
   YaHTTP::URL url("/hello/world");
   BOOST_CHECK_EQUAL(url.path, "/hello/world");
