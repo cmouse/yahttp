@@ -217,7 +217,7 @@ namespace YaHTTP {
     bool sendChunked = false;
 
     if (this->version > 10) { // 1.1 or better
-      if (headers.find("content-length") == headers.end()) {
+      if (headers.find("content-length") == headers.end() && !this->is_multipart) {
         // must use chunked on response
         sendChunked = (kind == YAHTTP_TYPE_RESPONSE);
         if ((headers.find("transfer-encoding") != headers.end() && headers.find("transfer-encoding")->second != "chunked")) {

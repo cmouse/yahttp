@@ -118,6 +118,7 @@ namespace YaHTTP {
       body = "";
       routeName = "";
       version = 11; // default to version 1.1
+      is_multipart = false;
     }
 protected:
     HTTPBase(const HTTPBase& rhs) {
@@ -164,7 +165,7 @@ public:
 
     ssize_t max_request_size; //<! maximum size of request
     ssize_t max_response_size;  //<! maximum size of response
- 
+    bool is_multipart; //<! if the request is multipart, prevents Content-Length header
 #ifdef HAVE_CPP_FUNC_PTR
     funcptr::function<size_t(const HTTPBase*,std::ostream&,bool)> renderer; //<! rendering function
 #endif
@@ -266,17 +267,21 @@ public:
         headers["content-type"] = "application/x-www-form-urlencoded; charset=utf-8";
       } else if (format == multipart) {
         headers["content-type"] = "multipart/form-data; boundary=YaHTTP-12ca543";
+        this->is_multipart = true;
         for(strstr_map_t::const_iterator i = POST().begin(); i != POST().end(); i++) {
-          postbuf << "--YaHTTP-12ca543\r\nContent-Disposition: form-data; name=\"" << Utility::encodeURL(i->first, false) << "; charset=UTF-8\r\n\r\n"
+          postbuf << "--YaHTTP-12ca543\r\nContent-Disposition: form-data; name=\"" << Utility::encodeURL(i->first, false) << "\"; charset=UTF-8\r\nContent-Length: " << i->second.size() << "\r\n\r\n"
             << Utility::encodeURL(i->second, false) << "\r\n";
         }
+        postbuf << "--";
+        body = postbuf.str();
       }
 
       postbuf.str("");
       postbuf << body.length();
       // set method and change headers
       method = "POST";
-      headers["content-length"] = postbuf.str();
+      if (!this->is_multipart)
+        headers["content-length"] = postbuf.str();
     }; //<! convert all postvars into string and stuff it into body
 
     friend std::ostream& operator<<(std::ostream& os, const Request &resp);
