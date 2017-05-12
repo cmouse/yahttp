@@ -235,7 +235,7 @@ namespace YaHTTP {
     // write headers
     strstr_map_t::const_iterator iter = headers.begin();
     while(iter != headers.end()) {
-      if (iter->first == "host" && kind != YAHTTP_TYPE_REQUEST) { iter++; continue; }
+      if (iter->first == "host" && (kind != YAHTTP_TYPE_REQUEST || version < 10)) { iter++; continue; }
       if (iter->first == "transfer-encoding" && sendChunked) { iter++; continue; }
       std::string header = Utility::camelizeHeader(iter->first);
       if (header == "Cookie" || header == "Set-Cookie") cookieSent = true;
