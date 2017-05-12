@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <string>
 #include <cstdio>
+#include <stdexcept>
 #include <sys/time.h>
 #include <iomanip>
 #include <list>
