@@ -105,8 +105,9 @@ namespace YaHTTP {
         std::transform(key.begin(), key.end(), key.begin(), ::tolower);
         // is it already defined
 
-        if ((key == "set-cookie" && target->kind == YAHTTP_TYPE_RESPONSE) ||
-            (key == "cookie" && target->kind == YAHTTP_TYPE_REQUEST)) {
+        if (key == "set-cookie" && target->kind == YAHTTP_TYPE_RESPONSE) {
+          target->jar.parseSetCookieHeader(value);
+        } else if (key == "cookie" && target->kind == YAHTTP_TYPE_REQUEST) {
           target->jar.parseCookieHeader(value);
         } else {
           if (key == "host" && target->kind == YAHTTP_TYPE_REQUEST) {
@@ -243,13 +244,21 @@ namespace YaHTTP {
       iter++;
     }
     if (version > 9 && !cookieSent && jar.cookies.size() > 0) { // write cookies
-      for(strcookie_map_t::const_iterator i = jar.cookies.begin(); i != jar.cookies.end(); i++) {
-        if (kind == YAHTTP_TYPE_REQUEST) {
-          os << "Cookie: ";
-        } else {
-          os << "Set-Cookie: ";
+     if (kind == YAHTTP_TYPE_REQUEST) {
+        bool first = true;
+        os << "Cookie: ";
+        for(strcookie_map_t::const_iterator i = jar.cookies.begin(); i != jar.cookies.end(); i++) {
+          if (first)
+            first = false;
+          else
+            os << "; ";
+          os << Utility::encodeURL(i->second.name) << "=" << Utility::encodeURL(i->second.value);
         }
-        os << i->second.str() << "\r\n";
+     } else if (kind == YAHTTP_TYPE_REQUEST) {
+        for(strcookie_map_t::const_iterator i = jar.cookies.begin(); i != jar.cookies.end(); i++) {
+          os << "Set-Cookie: ";
+          os << i->second.str() << "\r\n";
+        }
       }
     }
     os << "\r\n";

@@ -116,12 +116,12 @@ namespace YaHTTP {
      }; //<! parses date from struct tm 
 
      void validate() const {
-       if (wday < 0 || wday > 6) throw "Invalid date";
-       if (month < 1 || month > 12) throw "Invalid date";
-       if (year < 0) throw "Invalid date";
+       if (wday < 0 || wday > 6) throw std::range_error("Invalid date");
+       if (month < 1 || month > 12) throw std::range_error("Invalid date");
+       if (year < 0) throw std::range_error("Invalid date");
        if (hours < 0 || hours > 23 ||
            minutes < 0 || minutes > 59 ||
-           seconds < 0 || seconds > 60) throw "Invalid date";
+           seconds < 0 || seconds > 60) throw std::range_error("Invalid date");
      }; //<! make sure we are within ranges (not a *REAL* validation, just range check)
 
      std::string rfc_str() const {
@@ -163,29 +163,35 @@ namespace YaHTTP {
           while(*ptr && YaHTTP::isspace(*ptr)) ptr++;
           if (*ptr == '+') sign = 0;
           else if (*ptr == '-') sign = -1;
-          else throw "Unparseable date";
+          else throw YaHTTP::ParseError("Unparseable date");
           ptr++;
           utc_offset = ::atoi(ptr) * sign;
           while(*ptr != '\0' && YaHTTP::isdigit(*ptr)) ptr++;
 #endif
           while(*ptr != '\0' && YaHTTP::isspace(*ptr)) ptr++;
-          if (*ptr != '\0') throw "Unparseable date"; // must be final.
+          if (*ptr != '\0') throw YaHTTP::ParseError("Unparseable date"); // must be final.
           fromTm(&tm);
        } else {
-          throw "Unparseable date";
+          throw YaHTTP::ParseError("Unparseable date");
        }
      }; //<! parses RFC-822 date
 
      void parseCookie(const std::string &cookie_date) {
        struct tm tm;
        const char *ptr;
-       if ( (ptr = strptime(cookie_date.c_str(), "%d-%b-%Y %T", &tm)) != NULL) {
+       if ( (ptr = strptime(cookie_date.c_str(), "%d-%b-%Y %T", &tm)) != NULL
+#ifdef HAVE_TM_GMTOFF
+          || (ptr = strptime(cookie_date.c_str(), "%d-%b-%Y %T %z", &tm)) != NULL
+          || (ptr = strptime(cookie_date.c_str(), "%a, %d-%b-%Y %T %Z", &tm)) != NULL
+#endif
+          ) {
           while(*ptr != '\0' && ( YaHTTP::isspace(*ptr) || YaHTTP::isalnum(*ptr) )) ptr++;
-          if (*ptr != '\0') throw "Unparseable date (non-final)"; // must be final.
+          if (*ptr != '\0') throw YaHTTP::ParseError("Unparseable date (non-final)"); // must be final.
           fromTm(&tm);
           this->utc_offset = 0;
        } else {
-          throw "Unparseable date (did not match pattern cookie)";
+          std::cout << cookie_date << std::endl;
+          throw YaHTTP::ParseError("Unparseable date (did not match pattern cookie)");
        }
      }; //<! parses HTTP Cookie date
 
