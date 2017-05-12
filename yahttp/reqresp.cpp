@@ -1,8 +1,33 @@
 #include "yahttp.hpp"
 
 namespace YaHTTP {
+
+  bool isspace(char c) {
+    return std::isspace(c) != 0;
+  }
+
+  bool isspace(char c, const std::locale& loc) {
+    return std::isspace(c, loc);
+  }
+
+  bool isxdigit(char c) {
+    return std::isxdigit(c) != 0;
+  }
+
+  bool isxdigit(char c, const std::locale& loc) {
+    return std::isspace(c, loc);
+  }
+
+  bool isalnum(char c) {
+    return std::isalnum(c) != 0;
+  }
+
+  bool isalnum(char c, const std::locale& loc) {
+    return std::isspace(c, loc);
+  }
+
   template <class T>
-  int AsyncLoader<T>::feed(const std::string& somedata) {
+  bool AsyncLoader<T>::feed(const std::string& somedata) {
     buffer.append(somedata);
     while(state < 2) {
       int cr=0;
@@ -42,7 +67,7 @@ namespace YaHTTP {
           iss >> ver >> target->status;
           std::getline(iss, target->statusText);
           pos1=0;
-          while(pos1 < target->statusText.size() && ::isspace(target->statusText.at(pos1))) pos1++;
+          while(pos1 < target->statusText.size() && YaHTTP::isspace(target->statusText.at(pos1))) pos1++;
           target->statusText = target->statusText.substr(pos1); 
           if ((pos1 = target->statusText.find("\r")) != std::string::npos) {
             target->statusText = target->statusText.substr(0, pos1-1);
@@ -73,7 +98,7 @@ namespace YaHTTP {
         key = line.substr(0, pos1);
         value = line.substr(pos1+2);
         for(std::string::iterator it=key.begin(); it != key.end(); it++)
-          if (std::isspace(*it))
+          if (YaHTTP::isspace(*it))
             throw ParseError("Header key contains whitespace which is not allowed by RFC");
 
         Utility::trim(value);
@@ -136,7 +161,7 @@ namespace YaHTTP {
           buf[pos]=0; // just in case...
           buffer.erase(buffer.begin(), buffer.begin()+pos+1); // remove line from buffer
           sscanf(buf, "%x", &chunk_size);
-          if (!chunk_size) { state = 3; break; } // last chunk
+          if (chunk_size == 0) { state = 3; break; } // last chunk
         } else {
           int crlf=1;
           if (buffer.size() < static_cast<size_t>(chunk_size+1)) return false; // expect newline
@@ -270,7 +295,7 @@ namespace YaHTTP {
     while(is.good()) {
       char buf[1024];
       is.read(buf, 1024);
-      if (is.gcount()) { // did we actually read anything
+      if (is.gcount() > 0) { // did we actually read anything
         is.clear();
         if (arl.feed(std::string(buf, is.gcount())) == true) break; // completed
       }

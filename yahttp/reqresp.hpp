@@ -79,10 +79,10 @@ namespace YaHTTP {
 #endif
         n = 0;
 
-        while(ifs && ifs.good()) {
+        while(ifs.good()) {
           ifs.read(buf, sizeof buf);
           n += (k = ifs.gcount());
-          if (k) {
+          if (k > 0) {
             if (chunked) os << std::hex << k << std::dec << "\r\n";
             os.write(buf, k);
             if (chunked) os << "\r\n"; 
@@ -309,7 +309,7 @@ public:
       buffer = "";
       this->target->initialize();
     }; //<! Initialize the parser for target and clear state
-    int feed(const std::string& somedata); //<! Feed data to the parser
+    bool feed(const std::string& somedata); //<! Feed data to the parser
     bool ready() {
      return (chunked == true && state == 3) || // if it's chunked we get end of data indication
              (chunked == false && state > 1 &&  

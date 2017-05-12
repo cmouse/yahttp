@@ -5,6 +5,13 @@ namespace YaHTTP {
   static const char *MONTHS[] = {0,"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",0}; //<! List of months 
   static const char *DAYS[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat",0}; //<! List of days
 
+  bool isspace(char c);
+  bool isspace(char c, const std::locale& loc);
+  bool isxdigit(char c);
+  bool isxdigit(char c, const std::locale& loc);
+  bool isalnum(char c);
+  bool isalnum(char c, const std::locale& loc);
+
   /*! Case-Insensitive NULL safe comparator for string maps */
   struct ASCIICINullSafeComparator {
     bool operator() (const std::string& lhs, const std::string& rhs) const {
@@ -153,16 +160,16 @@ namespace YaHTTP {
 	if ( (ptr = strptime(rfc822_date.c_str(), "%a, %d %b %Y %T", &tm)) != NULL) {
           int sign;
   	  // parse the timezone parameter
-          while(*ptr && ::isspace(*ptr)) ptr++;
+          while(*ptr && YaHTTP::isspace(*ptr)) ptr++;
           if (*ptr == '+') sign = 0;
           else if (*ptr == '-') sign = -1;
           else throw "Unparseable date";
           ptr++;
           utc_offset = ::atoi(ptr) * sign;
-          while(*ptr && ::isdigit(*ptr)) ptr++;
+          while(*ptr != '\0' && YaHTTP::isdigit(*ptr)) ptr++;
 #endif
-          while(*ptr && ::isspace(*ptr)) ptr++;
-          if (*ptr) throw "Unparseable date"; // must be final.
+          while(*ptr != '\0' && YaHTTP::isspace(*ptr)) ptr++;
+          if (*ptr != '\0') throw "Unparseable date"; // must be final.
           fromTm(&tm);
        } else {
           throw "Unparseable date";
@@ -173,8 +180,8 @@ namespace YaHTTP {
        struct tm tm;
        const char *ptr;
        if ( (ptr = strptime(cookie_date.c_str(), "%d-%b-%Y %T", &tm)) != NULL) {
-          while(*ptr && ( ::isspace(*ptr) || ::isalnum(*ptr) )) ptr++;
-          if (*ptr) throw "Unparseable date (non-final)"; // must be final.
+          while(*ptr != '\0' && ( YaHTTP::isspace(*ptr) || YaHTTP::isalnum(*ptr) )) ptr++;
+          if (*ptr != '\0') throw "Unparseable date (non-final)"; // must be final.
           fromTm(&tm);
           this->utc_offset = 0;
        } else {
@@ -236,7 +243,7 @@ namespace YaHTTP {
       char repl[3];
       size_t pos;
       for(std::string::iterator iter = result.begin(); iter != result.end(); iter++) {
-        if (!std::isalnum(*iter) && (!asUrl || skip.find(*iter) == std::string::npos)) {
+        if (!YaHTTP::isalnum(*iter) && (!asUrl || skip.find(*iter) == std::string::npos)) {
           // replace with different thing
           pos = std::distance(result.begin(), iter);
           ::snprintf(repl,3,"%02x", static_cast<unsigned char>(*iter));
@@ -255,7 +262,7 @@ namespace YaHTTP {
       std::ostringstream result;
       std::string skip = "+-.,&;_#%[]?/@(){}=";
       for(std::vector<unsigned char>::iterator iter = vec.begin(); iter != vec.end(); iter++) {
-        if (!std::isalnum((char)*iter) && (!asUrl || skip.find((char)*iter) == std::string::npos)) {
+        if (!YaHTTP::isalnum((char)*iter) && (!asUrl || skip.find((char)*iter) == std::string::npos)) {
           // bit more complex replace
           result << "%" << std::hex << std::setw(2) << std::setfill('0') << static_cast<unsigned int>(*iter);
         } else result << (char)*iter;
@@ -409,14 +416,14 @@ namespace YaHTTP {
     static void trimLeft(std::string &str) {
        const std::locale &loc = std::locale::classic();
        std::string::iterator iter = str.begin();
-       while(iter != str.end() && std::isspace(*iter, loc)) iter++;
+       while(iter != str.end() && YaHTTP::isspace(*iter, loc)) iter++;
        str.erase(str.begin(), iter);
     }; //<! removes whitespace from left
 
     static void trimRight(std::string &str) {
        const std::locale &loc = std::locale::classic();
        std::string::reverse_iterator iter = str.rbegin();
-       while(iter != str.rend() && std::isspace(*iter, loc)) iter++;
+       while(iter != str.rend() && YaHTTP::isspace(*iter, loc)) iter++;
        str.erase(iter.base(), str.end());
     }; //<! removes whitespace from right
 
