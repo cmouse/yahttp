@@ -9,6 +9,8 @@ namespace YaHTTP {
   bool isspace(char c, const std::locale& loc);
   bool isxdigit(char c);
   bool isxdigit(char c, const std::locale& loc);
+  bool isdigit(char c);
+  bool isdigit(char c, const std::locale& loc);
   bool isalnum(char c);
   bool isalnum(char c, const std::locale& loc);
 
