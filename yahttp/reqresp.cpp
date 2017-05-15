@@ -15,7 +15,15 @@ namespace YaHTTP {
   }
 
   bool isxdigit(char c, const std::locale& loc) {
-    return std::isspace(c, loc);
+    return std::isxdigit(c, loc);
+  }
+
+  bool isdigit(char c) {
+    return std::isdigit(c) != 0;
+  }
+
+  bool isdigit(char c, const std::locale& loc) {
+    return std::isdigit(c, loc);
   }
 
   bool isalnum(char c) {
@@ -23,7 +31,7 @@ namespace YaHTTP {
   }
 
   bool isalnum(char c, const std::locale& loc) {
-    return std::isspace(c, loc);
+    return std::isalnum(c, loc);
   }
 
   template <class T>
