@@ -110,10 +110,10 @@ Collaboration diagram for YaHTTP::AsyncLoader&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a09017f33956f6a80b2a518eda032a69e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#a09017f33956f6a80b2a518eda032a69e">keyValuePair</a> (const std::string &amp;keyvalue, std::string &amp;key, std::string &amp;value)</td></tr>
 <tr class="separator:a09017f33956f6a80b2a518eda032a69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7dae16de4ad67934c609e0d9d6e7a2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#ac7dae16de4ad67934c609e0d9d6e7a2d">initialize</a> (T *<a class="el" href="classYaHTTP_1_1AsyncLoader.html#a4028e8f640dafa5b694009b1f611acf4">target</a>)</td></tr>
-<tr class="separator:ac7dae16de4ad67934c609e0d9d6e7a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb63f3c6918226666d9599ff7281b297"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#adb63f3c6918226666d9599ff7281b297">feed</a> (const std::string &amp;somedata)</td></tr>
-<tr class="separator:adb63f3c6918226666d9599ff7281b297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9450fae566573b94dbc428e1c4afa702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#a9450fae566573b94dbc428e1c4afa702">initialize</a> (T *target_)</td></tr>
+<tr class="separator:a9450fae566573b94dbc428e1c4afa702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15af980711aed1cceeb7da6d47f8ec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#aa15af980711aed1cceeb7da6d47f8ec2">feed</a> (const std::string &amp;somedata)</td></tr>
+<tr class="separator:aa15af980711aed1cceeb7da6d47f8ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5e8a22d4e08d69abb4c7edef600403"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#a7d5e8a22d4e08d69abb4c7edef600403">ready</a> ()</td></tr>
 <tr class="separator:a7d5e8a22d4e08d69abb4c7edef600403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b5ad732978f0691e3ad0812c0ead5fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYaHTTP_1_1AsyncLoader.html#a6b5ad732978f0691e3ad0812c0ead5fa">finalize</a> ()</td></tr>
@@ -148,14 +148,14 @@ class YaHTTP::AsyncLoader&lt; T &gt;</h3>
 
 <p>Asynchronous HTTP document loader </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="adb63f3c6918226666d9599ff7281b297"></a>
+<a class="anchor" id="aa15af980711aed1cceeb7da6d47f8ec2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classYaHTTP_1_1AsyncLoader.html">YaHTTP::AsyncLoader</a>&lt; T &gt;::feed </td>
+          <td class="memname">bool <a class="el" href="classYaHTTP_1_1AsyncLoader.html">YaHTTP::AsyncLoader</a>&lt; T &gt;::feed </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>somedata</em></td><td>)</td>
@@ -191,7 +191,7 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac7dae16de4ad67934c609e0d9d6e7a2d"></a>
+<a class="anchor" id="a9450fae566573b94dbc428e1c4afa702"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -204,7 +204,7 @@ template&lt;class T&gt; </div>
           <td class="memname">void <a class="el" href="classYaHTTP_1_1AsyncLoader.html">YaHTTP::AsyncLoader</a>&lt; T &gt;::initialize </td>
           <td>(</td>
           <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>target</em></td><td>)</td>
+          <td class="paramname"><em>target_</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -424,7 +424,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 1 2017 20:50:30 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 18 2017 13:51:23 for Yet Another HTTP Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
