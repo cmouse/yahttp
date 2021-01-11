@@ -134,7 +134,7 @@ protected:
 #endif
       this->is_multipart = rhs.is_multipart;
     };
-    HTTPBase& operator=(const HTTPBase& rhs) {
+    virtual HTTPBase& operator=(const HTTPBase& rhs) {
       this->url = rhs.url; this->kind = rhs.kind;
       this->status = rhs.status; this->statusText = rhs.statusText;
       this->method = rhs.method; this->headers = rhs.headers;
