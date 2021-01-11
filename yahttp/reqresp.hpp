@@ -96,7 +96,7 @@ namespace YaHTTP {
     };
 
     HTTPBase() {
-      initialize();
+      HTTPBase::initialize();
     };
 
     virtual void initialize() {
@@ -196,7 +196,7 @@ public:
   /*! Response class, represents a HTTP Response document */
   class Response: public HTTPBase { 
   public:
-    Response() { initialize(); };
+    Response() { Response::initialize(); };
     Response(const HTTPBase& rhs): HTTPBase(rhs) {
       this->kind = YAHTTP_TYPE_RESPONSE;
     };
@@ -225,7 +225,7 @@ public:
   /* Request class, represents a HTTP Request document */
   class Request: public HTTPBase {
   public:
-    Request() { initialize(); };
+    Request() { Request::initialize(); };
     Request(const HTTPBase& rhs): HTTPBase(rhs) {
       this->kind = YAHTTP_TYPE_REQUEST;
     };
