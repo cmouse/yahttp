@@ -200,12 +200,12 @@ public:
     Response(const HTTPBase& rhs): HTTPBase(rhs) {
       this->kind = YAHTTP_TYPE_RESPONSE;
     };
-    Response& operator=(const HTTPBase& rhs) {
+    Response& operator=(const HTTPBase& rhs) override {
       HTTPBase::operator=(rhs);
       this->kind = YAHTTP_TYPE_RESPONSE;
       return *this;
     };
-    void initialize() {
+    void initialize() override {
       HTTPBase::initialize();
       this->kind = YAHTTP_TYPE_RESPONSE;
     }
@@ -229,12 +229,12 @@ public:
     Request(const HTTPBase& rhs): HTTPBase(rhs) {
       this->kind = YAHTTP_TYPE_REQUEST;
     };
-    Request& operator=(const HTTPBase& rhs) {
+    Request& operator=(const HTTPBase& rhs) override {
       HTTPBase::operator=(rhs);
       this->kind = YAHTTP_TYPE_REQUEST;
       return *this;
     };
-    void initialize() {
+    void initialize() override {
       HTTPBase::initialize();
       this->kind = YAHTTP_TYPE_REQUEST;
     }
