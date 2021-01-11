@@ -200,3 +200,15 @@ User-Agent: YaHTTP v1.0\r\n\r\n");
 }
 
 }
+BOOST_AUTO_TEST_CASE(test_get_host_ipv6_literal_with_port) 
+{
+YaHTTP::Request req;
+req.version = 11;
+req.setup("GET", "http://[2001:db8::1]:5555/test");
+req.GET()["hello"] = "world";
+req.GET()["tree"] = "apple";
+BOOST_CHECK_EQUAL(req.str(),
+"GET /test?hello=world&tree=apple HTTP/1.1\r\n\
+Host: [2001:db8::1]\r\n\
+User-Agent: YaHTTP v1.0\r\n\r\n");
+}
