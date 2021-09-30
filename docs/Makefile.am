@@ -11,7 +11,7 @@ uninstall-local:
 	rm -rf $(DESTDIR)$(htmldir)
 
 html:
-	$(DOXYGEN) yahttp.cfg
+	$(DOXYGEN) $(srcdir)/yahttp.cfg
 
 clean-local:
 	rm -rf html
