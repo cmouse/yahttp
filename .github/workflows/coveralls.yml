@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  coveralls:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install dependencies
+      run: sudo apt-get install -y libboost-test-dev doxygen graphviz lcov
+    - name: prepare
+      run: ./autogen.sh
+    - name: configure
+      run: ./configure --enable-code-coverage
+    - name: check code coverage
+      run: make check-code-coverage
+    - name: submit result to overalls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: yahttp-git-coverage.info
+        flag-name: Unit

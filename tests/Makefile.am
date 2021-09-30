@@ -11,10 +11,15 @@ EXTRA_DIST = request-chunked.txt \
 	response-google-200.txt \
 	response-incomplete.txt
 
-test_CFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS)
-test_CXXFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS)
-test_LDADD=$(RELRO_LDFLAGS) $(PIE_LDFLAGS) $(BOOST_UNIT_TEST_FRAMEWORK_LDFLAGS) $(BOOST_UNIT_TEST_FRAMEWORK_LIBS) ../yahttp/libyahttp.la
+include $(top_srcdir)/aminclude_static.am
+
+test_CFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS) $(CODE_COVERAGE_CFLAGS)
+test_CXXFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS) $(CODE_COVERAGE_CXXFLAGS)
+test_LDADD=$(RELRO_LDFLAGS) $(PIE_LDFLAGS) $(BOOST_UNIT_TEST_FRAMEWORK_LDFLAGS) $(BOOST_UNIT_TEST_FRAMEWORK_LIBS) $(CODE_COVERAGE_LIBS) ../yahttp/libyahttp.la
 test_SOURCES=md5.h md5.c test-main.cpp test-md5.cpp test-utility.cpp test-url.cpp test-cookie.cpp test-request.cpp test-response.cpp test-router.cpp
 
 TESTS=test
-TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=all
+AM_TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=all
+
+clean-local: code-coverage-clean
+distclean-local: code-coverage-dist-clean
