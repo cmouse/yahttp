@@ -35,4 +35,16 @@ fi
 AC_CHECK_PROG([DOXYGEN], [doxygen], [doxygen], [true])
 
 AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile])
+AC_CONFIG_LINKS([tests/request-chunked.txt:tests/request-chunked.txt
+tests/request-get-cookies-ok.txt:tests/request-get-cookies-ok.txt
+tests/request-get-incomplete.txt:tests/request-get-incomplete.txt
+tests/request-get-ok.txt:tests/request-get-ok.txt
+tests/request-issue-7.txt:tests/request-issue-7.txt
+tests/request-post-ok.txt:tests/request-post-ok.txt
+tests/response-binary.txt:tests/response-binary.txt
+tests/response-chunked-body.txt:tests/response-chunked-body.txt
+tests/response-chunked-headers.txt:tests/response-chunked-headers.txt
+tests/response-google-200.txt:tests/response-google-200.txt
+tests/response-incomplete.txt:tests/response-incomplete.txt])
+
 AC_OUTPUT
