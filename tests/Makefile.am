@@ -1,7 +1,15 @@
-EXTRA_PROGRAMS=test
-EXTRA_DIST=request-get-cookies-ok.txt request-get-incomplete.txt request-get-ok.txt \
-           request-issue-7.txt request-post-ok.txt response-binary.txt response-chunked-body.txt \
-           response-chunked-headers.txt response-google-200.txt response-incomplete.txt request-chunked.txt
+check_PROGRAMS=test
+EXTRA_DIST = request-chunked.txt \
+	request-get-cookies-ok.txt \
+	request-get-incomplete.txt \
+	request-get-ok.txt \
+	request-issue-7.txt \
+	request-post-ok.txt \
+	response-binary.txt \
+	response-chunked-body.txt \
+	response-chunked-headers.txt \
+	response-google-200.txt \
+	response-incomplete.txt
 
 test_CFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS)
 test_CXXFLAGS=$(RELRO_CFLASG) $(PIE_CFLAGS) -I$(top_srcdir) $(BOOST_CPPFLAGS)
