@@ -34,7 +34,7 @@ fi
 
 AC_CHECK_PROG([DOXYGEN], [doxygen], [doxygen], [true])
 
-AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile])
+AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile docs/yahttp.cfg])
 AC_CONFIG_LINKS([tests/request-chunked.txt:tests/request-chunked.txt
 tests/request-get-cookies-ok.txt:tests/request-get-cookies-ok.txt
 tests/request-get-incomplete.txt:tests/request-get-incomplete.txt
