@@ -1,0 +1,44 @@
+name: C/C++ Coverity CI
+
+on:
+  push:
+    branches:
+      - master
+      - gha
+
+jobs:
+  coverity:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install dependencies
+      run: sudo apt-get install -y libboost-test-dev doxygen graphviz
+    - name: Download Coverity Build Tool
+      run: |
+        wget -q https://scan.coverity.com/download/linux64 --post-data "token=$TOKEN&project=cmouse%2Fyahttp" -O cov-analysis-linux64.tar.gz
+        mkdir cov-analysis-linux64
+        tar xzf cov-analysis-linux64.tar.gz --strip 1 -C cov-analysis-linux64
+      env:
+        TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}
+    - name: prepare
+      run: ./autogen.sh
+    - name: configure
+      run: ./configure
+    - name: make
+      run: |
+        export PATH=`pwd`/cov-analysis-linux64/bin:$PATH
+        cov-build --dir cov make
+    - name: Submit build result to coverity
+      run: |
+        tar czvf build.tgz cov
+        curl \
+          --form token=$TOKEN \
+          --form email=cmouse@cmouse.fi \
+          --form file=@build.tgz \
+          --form version=trunk \
+          --form description="$GITHUB_REF" \
+          https://scan.coverity.com/builds?project=cmouse%2Fyahttp
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
