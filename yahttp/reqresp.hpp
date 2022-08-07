@@ -1,14 +1,4 @@
-#ifdef HAVE_CXX11
 #include <functional>
-#define HAVE_CPP_FUNC_PTR
-namespace funcptr = std;
-#else
-#ifdef HAVE_BOOST
-#include <boost/function.hpp>
-namespace funcptr = boost;
-#define HAVE_CPP_FUNC_PTR
-#endif
-#endif
 
 #include <fstream>
 #include <cctype>
@@ -72,11 +62,7 @@ namespace YaHTTP {
       size_t operator()(const HTTPBase *doc __attribute__((unused)), std::ostream& os, bool chunked) const {
         char buf[4096];
         size_t n,k;
-#ifdef HAVE_CXX11
         std::ifstream ifs(path, std::ifstream::binary);
-#else
-        std::ifstream ifs(path.c_str(), std::ifstream::binary);
-#endif
         n = 0;
 
         while(ifs.good()) {
@@ -102,9 +88,7 @@ namespace YaHTTP {
     virtual void initialize() {
       kind = 0;
       status = 0;
-#ifdef HAVE_CPP_FUNC_PTR
       renderer = SendBodyRender();
-#endif
       max_request_size = YAHTTP_MAX_REQUEST_SIZE;
       max_response_size = YAHTTP_MAX_RESPONSE_SIZE;
       url = "";
@@ -129,9 +113,7 @@ protected:
       this->parameters = rhs.parameters; this->getvars = rhs.getvars;
       this->body = rhs.body; this->max_request_size = rhs.max_request_size;
       this->max_response_size = rhs.max_response_size; this->version = rhs.version;
-#ifdef HAVE_CPP_FUNC_PTR
       this->renderer = rhs.renderer;
-#endif
       this->is_multipart = rhs.is_multipart;
     };
     virtual HTTPBase& operator=(const HTTPBase& rhs) {
@@ -142,9 +124,7 @@ protected:
       this->parameters = rhs.parameters; this->getvars = rhs.getvars;
       this->body = rhs.body; this->max_request_size = rhs.max_request_size;
       this->max_response_size = rhs.max_response_size; this->version = rhs.version;
-#ifdef HAVE_CPP_FUNC_PTR
       this->renderer = rhs.renderer;
-#endif
       this->is_multipart = rhs.is_multipart;
       return *this;
     };
@@ -168,9 +148,7 @@ public:
     ssize_t max_request_size; //<! maximum size of request
     ssize_t max_response_size;  //<! maximum size of response
     bool is_multipart; //<! if the request is multipart, prevents Content-Length header
-#ifdef HAVE_CPP_FUNC_PTR
-    funcptr::function<size_t(const HTTPBase*,std::ostream&,bool)> renderer; //<! rendering function
-#endif
+    std::function<size_t(const HTTPBase*,std::ostream&,bool)> renderer; //<! rendering function
     void write(std::ostream& os) const; //<! writes request to the given output stream
 
     strstr_map_t& GET() { return getvars; }; //<! acccessor for getvars

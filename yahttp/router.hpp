@@ -2,31 +2,15 @@
 /* @file 
  * @brief Defines router class and support structures
  */
-#ifdef HAVE_CXX11
 #include <functional>
 #include <tuple>
-#define HAVE_CPP_FUNC_PTR
-#define IGNORE std::ignore
-namespace funcptr = std;
-#else
-#ifdef HAVE_BOOST
-#include <boost/function.hpp>
-#include <boost/tuple/tuple.hpp>
-#define IGNORE boost::tuples::ignore
-namespace funcptr = boost;
-#define HAVE_CPP_FUNC_PTR
-#else
-#warning "You need to configure with boost or have C++11 capable compiler for router"
-#endif
-#endif
 
-#ifdef HAVE_CPP_FUNC_PTR
 #include <vector>
 #include <utility>
 
 namespace YaHTTP {
-  typedef funcptr::function <void(Request* req, Response* resp)> THandlerFunction; //!< Handler function pointer 
-  typedef funcptr::tuple<std::string, std::string, THandlerFunction, std::string> TRoute; //!< Route tuple (method, urlmask, handler, name)
+  typedef std::function <void(Request* req, Response* resp)> THandlerFunction; //!< Handler function pointer
+  typedef std::tuple<std::string, std::string, THandlerFunction, std::string> TRoute; //!< Route tuple (method, urlmask, handler, name)
   typedef std::vector<TRoute> TRouteList; //!< List of routes in order of evaluation
 
   /*! Implements simple router.
@@ -69,4 +53,3 @@ If method is left empty, it will match any method. Name is also optional, but ne
     TRouteList routes; //<! Instance variable for routes
   };
 };
-#endif

@@ -45,11 +45,7 @@ struct RouterFixture {
 
     // reset routes to false
     BOOST_FOREACH(YaHTTP::TRoute route, YaHTTP::Router::GetRoutes()) {
-#ifdef HAVE_CXX11
       rth.routes[std::get<3>(route)] = false;
-#else
-      rth.routes[route.get<3>()] = false;
-#endif
     }
 
     // print routes

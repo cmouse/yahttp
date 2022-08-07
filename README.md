@@ -22,10 +22,12 @@ Integration guide
 
 Here are some instructions on how to integrate YaHTTP into your project. 
 
+Note that C++11 or newer is required.
+
 With automake and libtool
 -------------------------
 
-If you don't need router or any of the C++11 features, you can just create empty yahttp-config.h, or symlink it to your project's config.h for the yahttp.hpp to include. Then just put this stuff into it's own folder and create Makefile.am with following contents (you can change the compilation flags):
+If you don't need the router, you can just create empty yahttp-config.h, or symlink it to your project's config.h for the yahttp.hpp to include. Then just put this stuff into it's own folder and create Makefile.am with following contents (you can change the compilation flags):
 
 ```
 noinst_LTLIBRARIES=libyahttp.la
@@ -37,33 +39,17 @@ You can define RELRO and PIE to match your project.
 
 To compile your project use -Lpath/to/yahttp -lyahttp
 
-If you need router, additionally check for boost or C++11 and replace yahttp-config.h to config.h in yahttp.hpp or add relevant options to your compiler CXXFLAGS. See below for the flags.
+If you need router, replace yahttp-config.h to config.h in yahttp.hpp or add relevant options to your compiler CXXFLAGS. See below for the flags.
 
 Without automake
 ----------------
 
-Create simple Makefile with contents for C++11:
+Create simple Makefile with contents:
 
 ```
 OBJECTS=reqresp.o router.o
 CXX=gcc
-CXXFLAGS=-W -Wall -DHAVE_CXX11 -std=c++11 
-```
-
-Or create simple Makefile with contents for boost:
-
-```
-OBJECTS=reqresp.o router.o
-CXX=gcc
-CXXFLAGS=-W -Wall -DHAVE_BOOST 
-```
-
-Or if you don't need either one, just:
-
-```
-OBJECTS=reqresp.o 
-CXX=gcc
-CXXFLAGS=-W -Wall
+CXXFLAGS=-W -Wall -std=c++11
 ```
 
 YaHTTP include files can be placed where the rest of your includes are. Then just add your own code there and it should work just fine. 

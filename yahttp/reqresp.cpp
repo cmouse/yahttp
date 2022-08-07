@@ -109,12 +109,7 @@ namespace YaHTTP {
       }
     }
     os << "\r\n";
-#ifdef HAVE_CPP_FUNC_PTR
     this->renderer(this, os, sendChunked);
-#else
-    SendbodyRenderer r;
-    r(this, os, chunked)
-#endif
   };
 
   std::ostream& operator<<(std::ostream& os, const Response &resp) {

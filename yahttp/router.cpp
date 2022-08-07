@@ -5,7 +5,7 @@
 #include "router.hpp"
 
 namespace YaHTTP {
-  typedef funcptr::tuple<int,int> TDelim;
+  typedef std::tuple<int,int> TDelim;
 
   // router is defined here.
   YaHTTP::Router Router::router;
@@ -21,7 +21,7 @@ namespace YaHTTP {
        if (*i == '>') isopen = false;
     }
     std::transform(method2.begin(), method2.end(), method2.begin(), ::toupper); 
-    routes.push_back(funcptr::make_tuple(method2, url, handler, name));
+    routes.push_back(std::make_tuple(method2, url, handler, name));
   };
 
   bool Router::route(Request *req, THandlerFunction& handler) {
@@ -35,7 +35,7 @@ namespace YaHTTP {
       int k1,k2,k3;
       std::string pname;
       std::string method, url;
-      funcptr::tie(method, url, handler, rname) = *i;
+      std::tie(method, url, handler, rname) = *i;
     
       if (method.empty() == false && req->method != method) continue; // no match on method
       // see if we can't match the url
@@ -55,7 +55,7 @@ namespace YaHTTP {
             pos2 = req->url.path.size();
             matched = true;
             if (pname != "") 
-              params[pname] = funcptr::tie(pos1,pos2);
+              params[pname] = std::tie(pos1,pos2);
             k1 = url.size();
             k2 = req->url.path.size();
             break;
@@ -63,7 +63,7 @@ namespace YaHTTP {
             // match until url[k1]
             while(k2 < static_cast<int>(req->url.path.size()) && req->url.path[k2] != url[k1+1]) k2++;
             pos2 = k2;
-            params[pname] = funcptr::tie(pos1,pos2);
+            params[pname] = std::tie(pos1,pos2);
           }
           k2--;
         }
@@ -86,7 +86,7 @@ namespace YaHTTP {
 
     for(std::map<std::string, TDelim>::iterator i = params.begin(); i != params.end(); i++) {
       int p1,p2;
-      funcptr::tie(p1,p2) = i->second;
+      std::tie(p1,p2) = i->second;
       std::string value(req->url.path.begin() + p1, req->url.path.begin() + p2);
       value = Utility::decodeURL(value);
       req->parameters[i->first] = value;
@@ -99,7 +99,6 @@ namespace YaHTTP {
 
   void Router::printRoutes(std::ostream &os) {
     for(TRouteList::iterator i = routes.begin(); i != routes.end(); i++) {
-#ifdef HAVE_CXX11
       std::streamsize ss = os.width();
       std::ios::fmtflags ff = os.setf(std::ios::left);
       os.width(10);
@@ -110,9 +109,6 @@ namespace YaHTTP {
       os.setf(ff);
       os << "    " << std::get<3>(*i);
       os << std::endl;
-#else
-      os << i->get<0>() << "    " << i->get<1>() << "    " << i->get<3>() << std::endl;
-#endif
     } 
   };
 
@@ -123,11 +119,7 @@ namespace YaHTTP {
 
     bool found = false;
     for(TRouteList::iterator i = routes.begin(); !found && i != routes.end(); i++) {
-#ifdef HAVE_CXX11
       if (std::get<3>(*i) == name) { mask = std::get<1>(*i); method = std::get<0>(*i); found = true; }
-#else
-      if (i->get<3>() == name) { mask = i->get<1>(); method = i->get<0>(); found = true; }
-#endif
     }
 
     if (!found)
