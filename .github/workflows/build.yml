@@ -16,7 +16,7 @@ jobs:
     - name: prepare
       run: ./autogen.sh
     - name: configure
-      run: ./configure
+      run: ./configure --enable-fuzzing
     - name: make
       run: make
     - name: make check

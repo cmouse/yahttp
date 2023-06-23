@@ -35,7 +35,7 @@ fi
 
 AC_CHECK_PROG([DOXYGEN], [doxygen], [doxygen], [true])
 
-AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile docs/yahttp.cfg])
+AC_CONFIG_FILES([Makefile yahttp/Makefile tests/Makefile examples/Makefile docs/Makefile docs/yahttp.cfg fuzzing/Makefile])
 AC_CONFIG_LINKS([tests/request-chunked.txt:tests/request-chunked.txt
 tests/request-get-cookies-ok.txt:tests/request-get-cookies-ok.txt
 tests/request-get-incomplete.txt:tests/request-get-incomplete.txt
@@ -47,5 +47,15 @@ tests/response-chunked-body.txt:tests/response-chunked-body.txt
 tests/response-chunked-headers.txt:tests/response-chunked-headers.txt
 tests/response-google-200.txt:tests/response-google-200.txt
 tests/response-incomplete.txt:tests/response-incomplete.txt])
+
+AC_MSG_CHECKING([whether to enable fuzzing])
+AC_ARG_ENABLE([fuzzing],
+  AS_HELP_STRING([--enable-fuzzing],
+    [enable fuzzing @<:@default=no@:>@]),
+  [enable_fuzzing=$enableval],
+  [enable_fuzzing=no]
+)
+AC_MSG_RESULT([$enable_fuzzing])
+AM_CONDITIONAL([FUZZING], [test "x$enable_fuzzing" != "xno"])
 
 AC_OUTPUT
