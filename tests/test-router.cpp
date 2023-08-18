@@ -41,6 +41,8 @@ struct RouterFixture {
     YaHTTP::Router::Get("/test/<object>/<attribute>.<format>", rth.ObjectHandler, "object_attribute_format_get");
     YaHTTP::Router::Patch("/test/<object>/<attribute>.<format>", rth.Handler, "object_attribute_format_update");
     YaHTTP::Router::Get("/test", rth.Handler, "test_index");
+    YaHTTP::Router::Put("/test", rth.Handler, "test_put");
+    YaHTTP::Router::Post("/test", rth.Handler, "test_post");
     YaHTTP::Router::Get("/", rth.Handler, "root_path");
 
     // reset routes to false
@@ -74,7 +76,7 @@ BOOST_AUTO_TEST_CASE( test_router_basic ) {
   YaHTTP::THandlerFunction func = rth.NonHandler;
   req.setup("get", "http://test.org/");
   
-  BOOST_CHECK(YaHTTP::Router::Route(&req, func));
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
   func(&req, &resp);
 
   // check if it was hit
@@ -88,7 +90,7 @@ BOOST_AUTO_TEST_CASE( test_router_object ) {
   YaHTTP::THandlerFunction func = rth.NonHandler;
   req.setup("get", "http://test.org/test/1234/name.json");
 
-  BOOST_CHECK(YaHTTP::Router::Route(&req, func));
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
   func(&req, &resp);
 
   // check if it was hit
@@ -101,11 +103,35 @@ BOOST_AUTO_TEST_CASE( test_router_glob ) {
   YaHTTP::THandlerFunction func = rth.NonHandler;
   req.setup("get", "http://test.org/glob/truly and really/everything/there/is.json");
 
-  BOOST_CHECK(YaHTTP::Router::Route(&req, func));
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
   func(&req, &resp);
 
   // check if it was hit
   BOOST_CHECK(rth.routes["glob_get"]);
+};
+
+BOOST_AUTO_TEST_CASE( test_router_method ) {
+  YaHTTP::Request req;
+  YaHTTP::Response resp;
+  YaHTTP::THandlerFunction func = rth.NonHandler;
+
+  req.setup("get", "http://test.org/test");
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
+  func(&req, &resp);
+  BOOST_CHECK(rth.routes["test_index"]);
+
+  req.setup("post", "http://test.org/test");
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
+  func(&req, &resp);
+  BOOST_CHECK(rth.routes["test_post"]);
+
+  req.setup("put", "http://test.org/test");
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteFound);
+  func(&req, &resp);
+  BOOST_CHECK(rth.routes["test_put"]);
+
+  req.setup("delete", "http://test.org/test");
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteNoMethod);
 };
 
 BOOST_AUTO_TEST_CASE( test_router_urlFor ) {
@@ -134,7 +160,16 @@ BOOST_AUTO_TEST_CASE( test_router_missing_route ) {
   YaHTTP::THandlerFunction func = rth.NonHandler;
   req.setup("get", "http://test.org/missing/route");
 
-  BOOST_CHECK(!YaHTTP::Router::Route(&req, func));
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteNotFound);
+}
+
+BOOST_AUTO_TEST_CASE( test_router_method_mismatch ) {
+  YaHTTP::Request req;
+  YaHTTP::Response resp;
+  YaHTTP::THandlerFunction func = rth.NonHandler;
+  req.setup("post", "http://test.org/");
+
+  BOOST_CHECK(YaHTTP::Router::Route(&req, func) == YaHTTP::RouteNoMethod);
 }
 
 BOOST_AUTO_TEST_CASE( test_router_missing_urlFor ) {
@@ -152,6 +187,8 @@ BOOST_AUTO_TEST_CASE( test_router_print_routes ) {
 GET/test/<object>/<attribute>.<format>object_attribute_format_get\n\
 PATCH/test/<object>/<attribute>.<format>object_attribute_format_update\n\
 GET/testtest_index\n\
+PUT/testtest_put\n\
+POST/testtest_post\n\
 GET/root_path\n\
 ");
 };
