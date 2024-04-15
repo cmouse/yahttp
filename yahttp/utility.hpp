@@ -1,4 +1,13 @@
 #pragma once
+
+#ifndef YAHTTP_MAX_REQUEST_LINE_SIZE
+#define YAHTTP_MAX_REQUEST_LINE_SIZE 8192
+#endif
+
+#ifndef YAHTTP_MAX_REQUEST_FIELDS
+#define YAHTTP_MAX_REQUEST_FIELDS 100
+#endif
+
 namespace YaHTTP {
   static const char *MONTHS[] = {0,"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",0}; //<! List of months 
   static const char *DAYS[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat",0}; //<! List of days
@@ -361,9 +370,13 @@ namespace YaHTTP {
        }
     }; //<! static HTTP codes to text mappings
 
-    static strstr_map_t parseUrlParameters(std::string parameters) {
-      std::string::size_type pos = 0;
+    static strstr_map_t parseUrlParameters(const std::string& parameters) {
       strstr_map_t parameter_map;
+      if (parameters.size() > YAHTTP_MAX_REQUEST_LINE_SIZE) {
+        return parameter_map;
+      }
+
+      std::string::size_type pos = 0;
       while (pos != std::string::npos) {
         // find next parameter start
         std::string::size_type nextpos = parameters.find("&", pos);
@@ -387,11 +400,12 @@ namespace YaHTTP {
           // no parameters at all
           break;
         }
-        key = decodeURL(key);
-        value = decodeURL(value);
-        parameter_map[key] = value;
+        parameter_map[decodeURL(key)] = decodeURL(value);
         if (nextpos == std::string::npos) {
           // no more parameters left
+          break;
+        }
+        if (parameter_map.size() >= YAHTTP_MAX_REQUEST_FIELDS) {
           break;
         }
 
